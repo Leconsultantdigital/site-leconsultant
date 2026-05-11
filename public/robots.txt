@@ -1,0 +1,42 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+Disallow: /_next/
+Disallow: /api/
+Disallow: /admin/
+
+# Sitemaps
+Sitemap: https://leconsultantdigital.fr/sitemap.xml
+
+# Crawl delay (be respectful)
+Crawl-delay: 1
+
+# Specific rules for search engines
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# ChatGPT/GPT Bot
+User-agent: GPTBot
+Allow: /
+
+# Claude/Anthropic
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: DotBot
+Disallow: /
