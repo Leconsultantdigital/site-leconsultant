@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
 import ServicesGrid from '@/components/ServicesGrid';
 import ToolsSection from '@/components/ToolsSection';
-import PartnersSection from '@/components/PartnersSection';
+import LogoCarousel from '@/components/LogoCarousel';
 import StatsSection from '@/components/StatsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import BioBlock from '@/components/BioBlock';
@@ -25,8 +25,16 @@ export default function Home() {
         {/* NEW: Tools Section (position 3) */}
         <ToolsSection />
 
-        {/* Partners Section */}
-        <PartnersSection />
+        {/* Logo Carousel Section */}
+        <LogoCarousel
+          partners={[
+            { name: 'Clarsi', logo: '/logos/clarsi.png' },
+            { name: 'CréActifs', logo: '/logos/creactifs.png' },
+            { name: 'Eneko', logo: '/logos/eneko.png' },
+            { name: 'Gedaf Elsete', logo: '/logos/gedaf-elsete.png' },
+            { name: 'Mantion', logo: '/logos/mantion.png' },
+          ]}
+        />
 
         {/* Stats Section with TrustIndex */}
         <StatsSection />
