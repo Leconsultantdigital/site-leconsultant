@@ -51,7 +51,7 @@ function HeroPhoto() {
             </div>
 
             {/* Trust items with animated counters */}
-            <div className="flex flex-wrap gap-8 md:gap-12 pt-8 border-t border-border animate-slideUp" style={{ animationDelay: '0.4s' }}>
+            <div className="grid grid-cols-2 gap-8 md:gap-12 pt-8 border-t border-border animate-slideUp" style={{ animationDelay: '0.4s' }}>
               {TRUST_ITEMS.map((item, i) => {
                 const getIcon = () => {
                   if (item.icon === 'users') return <UsersIcon />;
@@ -61,14 +61,15 @@ function HeroPhoto() {
                 };
 
                 return (
-                  <StatCounter
-                    key={i}
-                    target={parseInt(item.num)}
-                    duration={2000}
-                    label={item.label}
-                    sublabel={item.sublabel}
-                    icon={getIcon()}
-                  />
+                  <div key={i} className={i === 2 ? 'col-span-2 md:col-span-1 md:col-start-1' : ''}>
+                    <StatCounter
+                      target={parseInt(item.num)}
+                      duration={2000}
+                      label={item.label}
+                      sublabel={item.sublabel}
+                      icon={getIcon()}
+                    />
+                  </div>
                 );
               })}
             </div>

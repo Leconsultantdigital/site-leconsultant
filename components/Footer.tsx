@@ -74,9 +74,9 @@ export default function Footer() {
         <div className="h-px bg-border mb-8"></div>
 
         {/* Bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted">
-          <p>&copy; 2026 Le Consultant Digital. Tous droits réservés.</p>
-          <div className="flex gap-6">
+        <div className="text-center text-sm text-muted">
+          <p className="mb-4">&copy; 2026 Le Consultant Digital. Tous droits réservés.</p>
+          <div className="flex gap-6 justify-center">
             <Link href="/mentions-legales" className="hover:text-dark transition duration-300">Mentions légales</Link>
             <Link href="/politique-confidentialite" className="hover:text-dark transition duration-300">Politique de confidentialité</Link>
           </div>

@@ -36,8 +36,8 @@ export default function ServicesGrid() {
         <div className="mb-16">
           <p className="text-sm font-bold text-yellow mb-4 uppercase tracking-widest">💼 Services</p>
           <h2 className="text-4xl md:text-4xl font-bold text-dark mb-4">
-            3 services<br />
-            qui<span className="text-yellow"> transforment</span>
+            <span className="text-secondary">3</span> services<br />
+            qui <span className="text-yellow">transforment</span>
           </h2>
         </div>
 

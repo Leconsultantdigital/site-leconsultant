@@ -4,7 +4,6 @@ import HeroSection from '@/components/HeroSection';
 import ServicesGrid from '@/components/ServicesGrid';
 import ToolsSection from '@/components/ToolsSection';
 import LogoCarousel from '@/components/LogoCarousel';
-import StatsSection from '@/components/StatsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import BioBlock from '@/components/BioBlock';
 import FAQSection from '@/components/FAQSection';
@@ -38,10 +37,7 @@ export default function Home() {
           ]}
         />
 
-        {/* Stats Section with TrustIndex */}
-        <StatsSection />
-
-        {/* Testimonials Section (via TrustIndex) */}
+        {/* Testimonials Section (Carousel with Reviews) */}
         <TestimonialsSection />
 
         {/* Bio/About Block */}
