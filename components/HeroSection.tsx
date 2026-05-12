@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { TRUST_ITEMS } from '@/lib/data';
+import StatCounter from './StatCounter';
+import { UsersIcon, StarIcon, BadgeIcon } from './Icons';
 
 export type HeroVariant = 'photo' | 'typo' | 'split' | 'centered';
 
@@ -48,17 +50,27 @@ function HeroPhoto() {
               </Link>
             </div>
 
-            {/* Trust items */}
-            <div className="flex flex-wrap gap-8 pt-8 border-t border-border animate-slideUp" style={{ animationDelay: '0.4s' }}>
-              {TRUST_ITEMS.map((item, i) => (
-                <div key={i} className="hover:scale-105 transition-transform">
-                  <div className="text-2xl md:text-3xl font-bold text-dark">
-                    {item.num}
-                    {item.sublabel && <span className="text-lg text-mid ml-1">{item.sublabel}</span>}
-                  </div>
-                  <div className="text-sm text-mid mt-1">{item.label}</div>
-                </div>
-              ))}
+            {/* Trust items with animated counters */}
+            <div className="flex flex-wrap gap-8 md:gap-12 pt-8 border-t border-border animate-slideUp" style={{ animationDelay: '0.4s' }}>
+              {TRUST_ITEMS.map((item, i) => {
+                const getIcon = () => {
+                  if (item.icon === 'users') return <UsersIcon />;
+                  if (item.icon === 'star') return <StarIcon />;
+                  if (item.icon === 'badge') return <BadgeIcon />;
+                  return null;
+                };
+
+                return (
+                  <StatCounter
+                    key={i}
+                    target={parseInt(item.num)}
+                    duration={2000}
+                    label={item.label}
+                    sublabel={item.sublabel}
+                    icon={getIcon()}
+                  />
+                );
+              })}
             </div>
           </div>
 

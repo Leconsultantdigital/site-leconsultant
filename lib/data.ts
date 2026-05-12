@@ -120,9 +120,9 @@ export const FAQ_ITEMS = [
 ];
 
 export const TRUST_ITEMS = [
-  { num: '500+', label: 'entrepreneurs formés' },
-  { num: '4.9', sublabel: '/5', label: '47 avis Google' },
-  { num: '15', sublabel: '+ ans', label: 'd\'expertise digitale' },
+  { num: '600', label: 'professionnels formés', icon: 'users' },
+  { num: '120', sublabel: '/5', label: 'avis Google certifiés', icon: 'star' },
+  { num: '15', sublabel: '+ ans', label: 'd\'expertise digitale', icon: 'badge' },
 ];
 
 export const BIO = {
