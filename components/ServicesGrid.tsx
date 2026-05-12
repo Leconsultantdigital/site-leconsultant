@@ -7,22 +7,25 @@ import { FormationIcon, MarketingIcon, LocalIcon } from '@/components/ServiceIco
 export default function ServicesGrid() {
   const serviceColors = [
     {
-      accent: 'from-blue-100 via-cyan-50 to-cyan-100',
-      accentLine: 'bg-blue-500',
+      accent: 'from-secondary/20 via-secondary/10 to-secondary/5',
+      accentLine: 'bg-secondary',
       icon: FormationIcon,
-      textAccent: 'text-blue-600'
+      textAccent: 'text-secondary',
+      bgCheckmark: 'bg-secondary/10'
     },
     {
-      accent: 'from-orange-100 via-yellow-50 to-yellow-100',
-      accentLine: 'bg-orange-500',
+      accent: 'from-yellow/20 via-yellow/10 to-yellow/5',
+      accentLine: 'bg-yellow',
       icon: MarketingIcon,
-      textAccent: 'text-orange-600'
+      textAccent: 'text-yellow',
+      bgCheckmark: 'bg-yellow/10'
     },
     {
-      accent: 'from-green-100 via-teal-50 to-teal-100',
-      accentLine: 'bg-teal-500',
+      accent: 'from-success/20 via-success/10 to-success/5',
+      accentLine: 'bg-success',
       icon: LocalIcon,
-      textAccent: 'text-teal-600'
+      textAccent: 'text-success',
+      bgCheckmark: 'bg-success/10'
     },
   ];
 
@@ -41,18 +44,18 @@ export default function ServicesGrid() {
         {/* Services Grid — Asymmetric Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {SERVICES.map((service, i) => {
-            const { accent, accentLine, icon: IconComponent, textAccent } = serviceColors[i] || serviceColors[0];
+            const { accent, accentLine, icon: IconComponent, textAccent, bgCheckmark } = serviceColors[i] || serviceColors[0];
             return (
               <div
                 key={i}
                 className={`
                   group
                   bg-gradient-to-br ${accent}
-                  rounded-3xl p-8 md:p-10
+                  rounded-3xl p-10 md:p-12
                   border-2 border-white/60
                   shadow-lg
                   transition-all duration-300
-                  hover:-translate-y-2 hover:shadow-2xl hover:border-yellow/30
+                  hover:-translate-y-3 hover:shadow-2xl hover:border-yellow/40
                   ${i === 1 ? 'md:scale-105' : ''}
                 `}
               >
@@ -84,20 +87,14 @@ export default function ServicesGrid() {
 
                 {/* Bullets */}
                 <ul className="space-y-3 mb-8">
-                  {service.bullets.map((bullet, j) => {
-                    let bgClass = 'bg-blue-100';
-                    if (i === 1) bgClass = 'bg-orange-100';
-                    if (i === 2) bgClass = 'bg-teal-100';
-
-                    return (
-                      <li key={j} className="flex items-start gap-3">
-                        <div className={`w-5 h-5 rounded-full ${bgClass} flex items-center justify-center flex-shrink-0 mt-0.5`}>
-                          <span className={`text-xs font-bold ${textAccent}`}>✓</span>
-                        </div>
-                        <span className="text-sm text-dark font-medium">{bullet}</span>
-                      </li>
-                    );
-                  })}
+                  {service.bullets.map((bullet, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <div className={`w-5 h-5 rounded-full ${bgCheckmark} flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                        <span className={`text-xs font-bold ${textAccent}`}>✓</span>
+                      </div>
+                      <span className="text-sm text-dark font-medium">{bullet}</span>
+                    </li>
+                  ))}
                 </ul>
 
                 {/* CTA Button */}

@@ -1,24 +1,26 @@
 'use client';
 
+import ReviewCarousel from '@/components/ReviewCarousel';
+import { REVIEWS } from '@/lib/data';
+
 export default function TestimonialsSection() {
   return (
-    <section className="py-16 md:py-20 bg-white">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50">
       <div className="container">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-sm font-bold text-yellow mb-4 uppercase tracking-widest">💬 Avis Clients</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
+          <p className="text-sm font-bold text-yellow mb-4 uppercase tracking-widest">💬 Avis Clients 5/5</p>
+          <h2 className="text-4xl md:text-4xl font-bold text-dark mb-4">
             Ce qu'en pensent <span className="text-yellow">mes clients</span>
           </h2>
           <p className="text-lg text-mid max-w-2xl mx-auto">
-            Voici les avis vérifiés de mes clients — mis à jour en temps réel depuis Google Business Profile
+            120+ avis certifiés Google Business Profile — mis à jour en temps réel
           </p>
         </div>
 
-        {/* TrustIndex Testimonials */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* TrustIndex affichera les avis ici */}
-          <div className="trustindex-widget md:col-span-3" />
+        {/* Review Carousel */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <ReviewCarousel reviews={REVIEWS} autoScroll={true} interval={6000} />
         </div>
 
         {/* Call-to-action */}

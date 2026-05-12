@@ -16,36 +16,36 @@ export default function StatsSection() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Stat 1: Google Reviews */}
-          <div className="bg-gradient-to-br from-yellow/10 to-yellow/5 border border-yellow/30 rounded-2xl p-8 hover:border-yellow/50 transition-all">
-            <div className="flex items-baseline gap-2 mb-3">
-              <div className="text-4xl md:text-5xl font-bold text-yellow">5</div>
-              <div className="text-2xl text-yellow">/5</div>
+          <div className="bg-gradient-to-br from-yellow/15 to-yellow/5 border border-yellow/40 rounded-3xl p-10 md:p-12 hover:border-yellow/60 transition-all hover:shadow-xl">
+            <div className="flex items-baseline gap-2 mb-4">
+              <div className="text-5xl md:text-6xl font-bold text-yellow">5</div>
+              <div className="text-3xl text-yellow">/5</div>
             </div>
-            <div className="text-sm text-gray-300 mb-2">★★★★★ sur 120 avis</div>
-            <p className="text-xs text-gray-400">Google Business Profile</p>
+            <div className="text-base text-gray-300 mb-2">★★★★★ sur 120 avis certifiés</div>
+            <p className="text-sm text-gray-400">Google Business Profile</p>
           </div>
 
           {/* Stat 2: Entrepreneurs */}
-          <div className="bg-gradient-to-br from-green-500/10 to-green-500/5 border border-green-500/30 rounded-2xl p-8 hover:border-green-500/50 transition-all">
-            <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">500+</div>
-            <div className="text-sm text-gray-300 mb-2">Entrepreneurs formés</div>
-            <p className="text-xs text-gray-400">À ChatGPT, Claude, Make.com</p>
+          <div className="bg-gradient-to-br from-secondary/15 to-secondary/5 border border-secondary/40 rounded-3xl p-10 md:p-12 hover:border-secondary/60 transition-all hover:shadow-xl">
+            <div className="text-5xl md:text-6xl font-bold text-secondary mb-3">600</div>
+            <div className="text-base text-gray-300 mb-2">Professionnels formés</div>
+            <p className="text-sm text-gray-400">À ChatGPT, Claude, Make.com, Gemini</p>
           </div>
 
           {/* Stat 3: Experience */}
-          <div className="bg-gradient-to-br from-blue-500/10 to-blue-500/5 border border-blue-500/30 rounded-2xl p-8 hover:border-blue-500/50 transition-all">
-            <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">15+</div>
-            <div className="text-sm text-gray-300 mb-2">Ans d'expertise digital</div>
-            <p className="text-xs text-gray-400">5 ans agence + 10 ans annonceur</p>
+          <div className="bg-gradient-to-br from-success/15 to-success/5 border border-success/40 rounded-3xl p-10 md:p-12 hover:border-success/60 transition-all hover:shadow-xl">
+            <div className="text-5xl md:text-6xl font-bold text-success mb-3">15+</div>
+            <div className="text-base text-gray-300 mb-2">Ans d'expertise digital</div>
+            <p className="text-sm text-gray-400">5 ans agence + 10 ans annonceur</p>
           </div>
 
           {/* Stat 4: Certification */}
-          <div className="bg-gradient-to-br from-purple-500/10 to-purple-500/5 border border-purple-500/30 rounded-2xl p-8 hover:border-purple-500/50 transition-all">
-            <div className="text-2xl mb-2">🏆</div>
-            <div className="text-sm text-gray-300 mb-2">Évaluateur national</div>
-            <p className="text-xs text-gray-400">Jury Certification IA (RS6776)</p>
+          <div className="bg-gradient-to-br from-warning/15 to-warning/5 border border-warning/40 rounded-3xl p-10 md:p-12 hover:border-warning/60 transition-all hover:shadow-xl">
+            <div className="text-3xl mb-3">🏆</div>
+            <div className="text-base text-gray-300 mb-2">Évaluateur national</div>
+            <p className="text-sm text-gray-400">Certification IA (RS6776)</p>
           </div>
         </div>
 

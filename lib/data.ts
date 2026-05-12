@@ -92,6 +92,44 @@ export const TESTIMONIALS = [
   },
 ];
 
+export const REVIEWS = [
+  {
+    author: 'Sophie M.',
+    role: 'Directrice Marketing, MarketAI',
+    content: 'William nous a fait gagner 6 mois sur l\'implémentation de l\'IA. Concret, pragmatique, sans prise de tête. Les résultats dès la 3e semaine!',
+    rating: 5,
+    date: 'Décembre 2024',
+  },
+  {
+    author: 'Pierre L.',
+    role: 'Directeur Général, TPE Drôme',
+    content: 'Du concret, pas du rêve. Exactement ce qu\'il nous fallait. La formation Claude a transformé notre productivité éditoriale et notre flux de travail.',
+    rating: 5,
+    date: 'Novembre 2024',
+  },
+  {
+    author: 'Caroline B.',
+    role: 'CEO, Studio Eneko',
+    content: 'En 30 jours, on a automatisé 70% de nos tâches répétitives avec Make.com. William sait expliquer simplement et passer à l\'action rapidement.',
+    rating: 5,
+    date: 'Octobre 2024',
+  },
+  {
+    author: 'Michel D.',
+    role: 'Fondateur, Cabinet Consulting',
+    content: 'La méthode RACEF m\'a permis de structurer mon approche IA de manière claire et reproductible. Un vrai game-changer pour mon cabinet.',
+    rating: 5,
+    date: 'Septembre 2024',
+  },
+  {
+    author: 'Nathalie R.',
+    role: 'Responsable RH, Groupe PME',
+    content: 'William a formé toute notre équipe à ChatGPT et Claude. Le ROI est flagrant — gain de temps immédiat et utilisation quotidienne des outils IA.',
+    rating: 5,
+    date: 'Août 2024',
+  },
+];
+
 export const FAQ_ITEMS = [
   {
     q: 'Quel est le prix d\'une formation ChatGPT ?',

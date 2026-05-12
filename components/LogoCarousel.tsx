@@ -16,25 +16,25 @@ export default function LogoCarousel({ partners }: LogoCarouselProps) {
   const duplicatedPartners = [...partners, ...partners];
 
   return (
-    <div className="w-full overflow-hidden bg-white py-8 md:py-12">
+    <div className="w-full overflow-hidden bg-white py-16 md:py-24">
       <div className="container">
-        <p className="text-sm font-bold text-mid text-center mb-10 uppercase tracking-widest">
-          🤝 Partenaires de confiance
+        <p className="text-sm font-bold text-yellow text-center mb-12 uppercase tracking-widest">
+          🤝 Ils nous font confiance
         </p>
 
         {/* Carousel Container */}
         <div className="relative overflow-hidden">
           <div
-            className="flex gap-8 md:gap-12"
+            className="flex gap-12 md:gap-20"
             style={{
-              animation: 'scroll-horizontal 30s linear infinite',
+              animation: 'scroll-horizontal 40s linear infinite',
               width: 'fit-content',
             }}
           >
             {duplicatedPartners.map((partner, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 w-[140px] md:w-[160px] h-16 md:h-20 flex items-center justify-center bg-bg-light rounded-lg border border-border hover:shadow-md transition-all duration-300"
+                className="flex-shrink-0 w-[180px] md:w-[240px] h-24 md:h-32 flex items-center justify-center bg-gradient-to-br from-yellow/5 to-gray-50 rounded-2xl border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="relative w-full h-full p-3">
                   <Image
