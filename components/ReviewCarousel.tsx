@@ -115,10 +115,10 @@ export default function ReviewCarousel({
               onClick={() => goToSlide(i)}
               onMouseEnter={() => setIsAutoScroll(false)}
               onMouseLeave={() => setIsAutoScroll(autoScroll)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`rounded-full transition-all duration-300 ${
                 i === currentIndex
-                  ? 'bg-yellow w-8'
-                  : 'bg-gray-300 hover:bg-gray-400'
+                  ? 'bg-yellow w-8 h-3 shadow-lg'
+                  : 'w-3 h-3 bg-gray-300 hover:bg-gray-400 hover:scale-110'
               }`}
               aria-label={`Go to review ${i + 1}`}
             />
@@ -131,7 +131,7 @@ export default function ReviewCarousel({
             onClick={prevSlide}
             onMouseEnter={() => setIsAutoScroll(false)}
             onMouseLeave={() => setIsAutoScroll(autoScroll)}
-            className="w-10 h-10 rounded-full bg-yellow/10 border border-yellow/30 flex items-center justify-center hover:bg-yellow hover:text-dark transition-all duration-300 text-dark font-bold"
+            className="w-10 h-10 rounded-full bg-yellow/10 border border-yellow/30 flex items-center justify-center hover:bg-yellow hover:text-dark hover:shadow-md hover:scale-110 active:scale-95 transition-all duration-300 text-dark font-bold"
             aria-label="Previous review"
           >
             ←
@@ -140,7 +140,7 @@ export default function ReviewCarousel({
             onClick={nextSlide}
             onMouseEnter={() => setIsAutoScroll(false)}
             onMouseLeave={() => setIsAutoScroll(autoScroll)}
-            className="w-10 h-10 rounded-full bg-yellow/10 border border-yellow/30 flex items-center justify-center hover:bg-yellow hover:text-dark transition-all duration-300 text-dark font-bold"
+            className="w-10 h-10 rounded-full bg-yellow/10 border border-yellow/30 flex items-center justify-center hover:bg-yellow hover:text-dark hover:shadow-md hover:scale-110 active:scale-95 transition-all duration-300 text-dark font-bold"
             aria-label="Next review"
           >
             →

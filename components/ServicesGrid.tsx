@@ -70,9 +70,9 @@ export default function ServicesGrid() {
                   </div>
                 </div>
 
-                {/* Accent line under number (static) */}
+                {/* Accent line under number (animates on hover) */}
                 <div
-                  className={`h-1 w-12 ${accentLine} rounded-full mb-6`}
+                  className={`h-1 w-12 ${accentLine} rounded-full mb-6 transition-all duration-500 group-hover:w-20`}
                 />
 
                 {/* Title */}
@@ -106,6 +106,7 @@ export default function ServicesGrid() {
                     hover:text-yellow
                     transition-colors duration-300
                     group/link
+                    link-underline
                   `}
                 >
                   En savoir plus
