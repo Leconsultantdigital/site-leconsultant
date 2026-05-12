@@ -1,0 +1,8 @@
+{
+  "remoteControlAtStartup": false,
+  "isolatePeerMachines": false,
+  "daemonColdStart": "transient",
+  "autoUploadSessions": true,
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true
+}

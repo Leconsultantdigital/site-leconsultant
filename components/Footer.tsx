@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -7,12 +8,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* About */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-yellow rounded-md flex items-center justify-center text-dark font-bold text-sm">
-                L
-              </div>
-              <span className="font-bold text-dark">Le Consultant Digital</span>
-            </div>
+            <Link href="/" className="inline-block mb-4 hover:opacity-80 transition">
+              <Image
+                src="/logo.jpg"
+                alt="Le Consultant Digital"
+                width={35}
+                height={35}
+                className="h-8 w-auto"
+              />
+            </Link>
             <p className="text-mid text-sm leading-relaxed">
               Consultant IA générative, formations et directeur marketing externalisé pour entrepreneurs et PME. Du concret, pas du rêve.
             </p>
