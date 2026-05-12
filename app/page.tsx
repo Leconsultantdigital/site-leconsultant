@@ -2,6 +2,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
 import ServicesGrid from '@/components/ServicesGrid';
+import ToolsSection from '@/components/ToolsSection';
+import PartnersSection from '@/components/PartnersSection';
 import StatsSection from '@/components/StatsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import BioBlock from '@/components/BioBlock';
@@ -20,10 +22,16 @@ export default function Home() {
         {/* Services Grid */}
         <ServicesGrid />
 
-        {/* Stats Section */}
+        {/* NEW: Tools Section (position 3) */}
+        <ToolsSection />
+
+        {/* Partners Section */}
+        <PartnersSection />
+
+        {/* Stats Section with TrustIndex */}
         <StatsSection />
 
-        {/* Testimonials Section */}
+        {/* Testimonials Section (via TrustIndex) */}
         <TestimonialsSection />
 
         {/* Bio/About Block */}

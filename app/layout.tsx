@@ -109,8 +109,8 @@ export default function RootLayout({
               priceRange: '€500-€5000',
               aggregateRating: {
                 '@type': 'AggregateRating',
-                ratingValue: '4.9',
-                reviewCount: '47',
+                ratingValue: '5.0',
+                reviewCount: '120',
               },
               knowsAbout: ['ChatGPT', 'Claude', 'IA générative', 'Make.com', 'SEO', 'Marketing digital', 'LinkedIn B2B'],
               sameAs: [
@@ -181,6 +181,9 @@ export default function RootLayout({
             }),
           }}
         />
+
+        {/* TrustIndex Widget */}
+        <script defer async src='https://cdn.trustindex.io/loader.js?8efd29336181585fb20608aaeec'></script>
 
         {/* Google Analytics 4 */}
         <script
