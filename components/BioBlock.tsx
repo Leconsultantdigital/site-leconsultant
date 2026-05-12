@@ -10,8 +10,8 @@ export default function BioBlock() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Left: Photo placeholder */}
           <div className="relative hidden md:block">
-            <div className="aspect-square max-w-md mx-auto bg-gray-200 rounded-3xl overflow-hidden shadow-lg flex items-center justify-center text-gray-400">
-              Photo William
+            <div className="aspect-square max-w-md mx-auto bg-gray-200 rounded-3xl overflow-hidden shadow-lg flex items-center justify-center text-gray-400" role="img" aria-label="William Martin - Portrait">
+              Photo William Martin
             </div>
           </div>
 

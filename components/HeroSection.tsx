@@ -90,7 +90,7 @@ function HeroPhoto() {
                 }}
               />
               {/* Card with shadow */}
-              <div className="absolute inset-0 bg-white rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white">
+              <div className="absolute inset-0 bg-white rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white" role="img" aria-label="William Martin - AI Consultant and Trainer">
                 <div className="w-full h-full bg-gradient-to-b from-gray-200 to-gray-100 flex items-center justify-center text-gray-400 text-center px-4">
                   <div>
                     <div className="text-sm font-medium mb-2">📸 Photo William Martin</div>
@@ -99,15 +99,16 @@ function HeroPhoto() {
                 </div>
               </div>
 
-              {/* Badge 1: RS6776 */}
-              <div className="absolute -top-6 right-4 bg-white rounded-lg p-4 shadow-lg z-20 border-2 border-yellow animate-bounce" style={{ animationDelay: '0.6s' }}>
+              {/* Badge 1: RS6776 — Pulse animation instead of bounce */}
+              <div className="absolute -top-6 right-4 bg-white rounded-lg p-4 shadow-lg z-20 border-2 border-yellow group hover:shadow-xl transition-shadow animate-pulse-glow" title="Certification IA générative nationale - Évaluateur officiel">
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 bg-yellow rounded-md flex items-center justify-center text-dark font-bold text-lg">
                     🏆
                   </div>
                   <div>
                     <div className="font-bold text-sm text-dark">RS6776</div>
-                    <div className="text-xs text-mid">Jury certifié IA</div>
+                    <div className="text-xs text-mid">Certification IA nationale</div>
+                    <div className="text-xs text-gray-500">Évaluateur</div>
                   </div>
                 </div>
               </div>

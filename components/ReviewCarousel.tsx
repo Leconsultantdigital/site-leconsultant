@@ -34,6 +34,17 @@ export default function ReviewCarousel({
     return () => clearInterval(timer);
   }, [isAutoScroll, reviews.length, interval]);
 
+  // Auto-resume after 5 seconds of inactivity
+  useEffect(() => {
+    if (isAutoScroll) return;
+
+    const resumeTimer = setTimeout(() => {
+      setIsAutoScroll(true);
+    }, 5000);
+
+    return () => clearTimeout(resumeTimer);
+  }, [isAutoScroll]);
+
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
     setIsAutoScroll(false);
@@ -54,9 +65,19 @@ export default function ReviewCarousel({
   }
 
   const currentReview = reviews[currentIndex];
+  const isPaused = !isAutoScroll;
 
   return (
     <div className="w-full">
+      {/* Pause indicator */}
+      {isPaused && (
+        <div className="text-center mb-4">
+          <span className="inline-block px-4 py-1.5 bg-yellow/10 border border-yellow/30 rounded-full text-xs font-semibold text-yellow">
+            ⏸️ Paused — Click to resume
+          </span>
+        </div>
+      )}
+
       {/* Main Review Card */}
       <div className="bg-gradient-to-br from-yellow/10 to-yellow/5 border-2 border-yellow/30 rounded-3xl p-10 md:p-14 min-h-[320px] flex flex-col justify-between shadow-lg hover:shadow-xl transition-all">
         {/* Stars */}

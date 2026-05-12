@@ -348,13 +348,6 @@ img {
 }
 
 /* ── Utility Classes ──────────────────────────────────────── */
-.text-gradient {
-  background: linear-gradient(180deg, #1C1C2E 0%, #FFD200 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
