@@ -1,14 +1,16 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function ToolsSection() {
   const tools = [
-    { name: 'Claude', icon: '🧠', color: 'from-purple-100 to-purple-50' },
-    { name: 'ChatGPT', icon: '💬', color: 'from-green-100 to-green-50' },
-    { name: 'Gemini', icon: '✨', color: 'from-blue-100 to-blue-50' },
-    { name: 'Make', icon: '⚙️', color: 'from-orange-100 to-orange-50' },
-    { name: 'Notion', icon: '📝', color: 'from-gray-100 to-gray-50' },
-    { name: 'Perplexity', icon: '🔍', color: 'from-indigo-100 to-indigo-50' },
-    { name: 'Canva', icon: '🎨', color: 'from-pink-100 to-pink-50' },
+    { name: 'Claude', logo: '/tools/claude.svg', color: 'from-purple-100 to-purple-50' },
+    { name: 'ChatGPT', logo: '/tools/chatgpt.svg', color: 'from-green-100 to-green-50' },
+    { name: 'Gemini', logo: '/tools/gemini.svg', color: 'from-blue-100 to-blue-50' },
+    { name: 'Make', logo: '/tools/make.svg', color: 'from-orange-100 to-orange-50' },
+    { name: 'Notion', logo: '/tools/notion.svg', color: 'from-gray-100 to-gray-50' },
+    { name: 'Perplexity', logo: '/tools/perplexity.svg', color: 'from-indigo-100 to-indigo-50' },
+    { name: 'Canva', logo: '/tools/canva.svg', color: 'from-pink-100 to-pink-50' },
   ];
 
   return (
@@ -49,9 +51,14 @@ export default function ToolsSection() {
                 className="absolute left-0 top-0 h-1 bg-yellow rounded-t-2xl transition-all duration-300 w-0 group-hover:w-full"
               />
 
-              {/* Icon */}
-              <div className="text-5xl mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
-                {tool.icon}
+              {/* Logo */}
+              <div className="w-16 h-16 mb-4 relative transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
+                <Image
+                  src={tool.logo}
+                  alt={tool.name}
+                  fill
+                  className="object-contain"
+                />
               </div>
 
               {/* Name */}
