@@ -17,9 +17,9 @@ function HeroPhoto() {
           {/* Left: Text */}
           <div className="animate-fadeInLeft">
             {/* Pill */}
-            <div className="inline-flex items-center gap-3 mb-8 bg-white border border-border rounded-full px-4 py-2.5">
-              <span className="bg-yellow text-dark px-4 py-2 rounded-full text-xs font-bold flex items-center justify-center min-w-[80px]">✨ NOUVEAU</span>
-              <span className="text-sm font-medium text-dark">Programme IA — 30 jours pour intégrer</span>
+            <div className="inline-flex items-center gap-3 mb-8 bg-white border border-border rounded-full px-4 py-2">
+              <span className="bg-yellow text-dark px-3.5 py-1 rounded-full text-xs font-bold flex items-center justify-center min-w-[80px]">✨ NOUVEAU</span>
+              <span className="text-sm font-medium text-dark py-1.5">Programme IA — 30 jours pour intégrer</span>
             </div>
 
             {/* Heading — NOUVELLE PROMISE */}
