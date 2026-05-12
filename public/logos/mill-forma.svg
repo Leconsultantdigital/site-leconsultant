@@ -1,0 +1,12 @@
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="100" fill="#0F3A52"/>
+  <g transform="translate(20, 20)">
+    <rect x="0" y="20" width="4" height="40" fill="#D4AF37"/>
+    <rect x="8" y="10" width="4" height="50" fill="#B8E041"/>
+    <rect x="16" y="25" width="4" height="35" fill="#D4AF37"/>
+    <rect x="24" y="15" width="4" height="45" fill="#B8E041"/>
+    <rect x="32" y="20" width="4" height="40" fill="#D4AF37"/>
+    <rect x="40" y="10" width="4" height="50" fill="#B8E041"/>
+  </g>
+  <text x="75" y="60" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white">Mill Forma</text>
+</svg>

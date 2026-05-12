@@ -1,0 +1,5 @@
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="30" height="30" fill="#0369A1" rx="4"/>
+  <polygon points="35,20 40,15 45,20" fill="#FCD34D"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#0369A1">Mantion</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="100" fill="#2D2D2D"/>
+  <text x="20" y="65" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">sim</text>
+  <text x="140" y="65" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#E83E8C">e</text>
+  <text x="175" y="65" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">uble</text>
+  <text x="285" y="65" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#E83E8C">.fr</text>
+</svg>
