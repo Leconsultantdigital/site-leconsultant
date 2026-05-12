@@ -2,12 +2,28 @@
 
 import Link from 'next/link';
 import { SERVICES } from '@/lib/data';
+import { FormationIcon, MarketingIcon, LocalIcon } from '@/components/ServiceIcons';
 
 export default function ServicesGrid() {
   const serviceColors = [
-    { accent: 'from-yellow-100 to-yellow-50', icon: '🚀', textAccent: 'text-yellow' },
-    { accent: 'from-blue-100 to-blue-50', icon: '📊', textAccent: 'text-blue-600' },
-    { accent: 'from-green-100 to-green-50', icon: '🏆', textAccent: 'text-green-600' },
+    {
+      accent: 'from-blue-100 via-cyan-50 to-cyan-100',
+      accentLine: 'bg-blue-500',
+      icon: FormationIcon,
+      textAccent: 'text-blue-600'
+    },
+    {
+      accent: 'from-orange-100 via-yellow-50 to-yellow-100',
+      accentLine: 'bg-orange-500',
+      icon: MarketingIcon,
+      textAccent: 'text-orange-600'
+    },
+    {
+      accent: 'from-green-100 via-teal-50 to-teal-100',
+      accentLine: 'bg-teal-500',
+      icon: LocalIcon,
+      textAccent: 'text-teal-600'
+    },
   ];
 
   return (
@@ -25,7 +41,7 @@ export default function ServicesGrid() {
         {/* Services Grid — Asymmetric Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {SERVICES.map((service, i) => {
-            const { accent, icon, textAccent } = serviceColors[i] || serviceColors[0];
+            const { accent, accentLine, icon: IconComponent, textAccent } = serviceColors[i] || serviceColors[0];
             return (
               <div
                 key={i}
@@ -34,22 +50,26 @@ export default function ServicesGrid() {
                   bg-gradient-to-br ${accent}
                   rounded-3xl p-8 md:p-10
                   border-2 border-white/60
+                  shadow-lg
                   transition-all duration-300
-                  hover:-translate-y-2 hover:shadow-xl hover:border-yellow/30
+                  hover:-translate-y-2 hover:shadow-2xl hover:border-yellow/30
                   ${i === 1 ? 'md:scale-105' : ''}
                 `}
               >
+
                 {/* Top: Icon + Number */}
                 <div className="flex items-start justify-between mb-6">
-                  <div className="text-4xl">{icon}</div>
-                  <div className={`text-2xl font-bold ${textAccent}`}>
+                  <div className={`${textAccent} w-12 h-12 flex items-center justify-center`}>
+                    <IconComponent />
+                  </div>
+                  <div className={`text-3xl font-bold ${textAccent}`}>
                     {service.num}
                   </div>
                 </div>
 
-                {/* Accent line on hover */}
-                <div 
-                  className={`h-1 w-0 bg-yellow rounded-full mb-6 transition-all duration-500 group-hover:w-12`}
+                {/* Accent line under number (static) */}
+                <div
+                  className={`h-1 w-12 ${accentLine} rounded-full mb-6`}
                 />
 
                 {/* Title */}
@@ -64,12 +84,20 @@ export default function ServicesGrid() {
 
                 {/* Bullets */}
                 <ul className="space-y-3 mb-8">
-                  {service.bullets.map((bullet, j) => (
-                    <li key={j} className="flex items-start gap-3">
-                      <span className="text-yellow text-lg mt-0.5 flex-shrink-0">✓</span>
-                      <span className="text-sm text-dark font-medium">{bullet}</span>
-                    </li>
-                  ))}
+                  {service.bullets.map((bullet, j) => {
+                    let bgClass = 'bg-blue-100';
+                    if (i === 1) bgClass = 'bg-orange-100';
+                    if (i === 2) bgClass = 'bg-teal-100';
+
+                    return (
+                      <li key={j} className="flex items-start gap-3">
+                        <div className={`w-5 h-5 rounded-full ${bgClass} flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                          <span className={`text-xs font-bold ${textAccent}`}>✓</span>
+                        </div>
+                        <span className="text-sm text-dark font-medium">{bullet}</span>
+                      </li>
+                    );
+                  })}
                 </ul>
 
                 {/* CTA Button */}
