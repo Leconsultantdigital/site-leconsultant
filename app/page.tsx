@@ -28,13 +28,13 @@ export default function Home() {
         {/* Logo Carousel Section */}
         <LogoCarousel
           partners={[
-            { name: 'Clarsi', logo: '/logos/clarsi.svg' },
-            { name: 'CréActifs', logo: '/logos/creactifs.svg' },
-            { name: 'Eneko', logo: '/logos/eneko.svg' },
-            { name: 'Gedaf Elsete', logo: '/logos/gedaf-elsete.svg' },
-            { name: 'Mantion', logo: '/logos/mantion.svg' },
-            { name: 'Mill Forma', logo: '/logos/mill-forma.svg' },
-            { name: 'Simeuble.fr', logo: '/logos/simeuble.svg' },
+            { name: 'Clarsi', logo: '/tools/Clarsi.png' },
+            { name: 'CréActifs', logo: '/tools/Créactifs.png' },
+            { name: 'Eneko', logo: '/tools/Eneko.png' },
+            { name: 'Gedaf Elsete', logo: '/tools/Gedaf Elsete Formation Conseil.png' },
+            { name: 'Mantion', logo: '/tools/Mantion.png' },
+            { name: 'Mill Forma', logo: '/tools/Mill Forma.png' },
+            { name: 'Simeuble.fr', logo: '/tools/Simeuble.png' },
           ]}
         />
 

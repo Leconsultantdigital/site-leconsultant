@@ -4,13 +4,13 @@ import Image from 'next/image';
 
 export default function ToolsSection() {
   const tools = [
-    { name: 'Claude', logo: '/tools/claude.svg', color: 'from-purple-100 to-purple-50' },
-    { name: 'ChatGPT', logo: '/tools/chatgpt.svg', color: 'from-green-100 to-green-50' },
-    { name: 'Gemini', logo: '/tools/gemini.svg', color: 'from-blue-100 to-blue-50' },
-    { name: 'Make', logo: '/tools/make.svg', color: 'from-orange-100 to-orange-50' },
-    { name: 'Notion', logo: '/tools/notion.svg', color: 'from-gray-100 to-gray-50' },
-    { name: 'Perplexity', logo: '/tools/perplexity.svg', color: 'from-indigo-100 to-indigo-50' },
-    { name: 'Canva', logo: '/tools/canva.svg', color: 'from-pink-100 to-pink-50' },
+    { name: 'Claude', logo: '/tools/Claude.png', color: 'from-purple-100 to-purple-50' },
+    { name: 'ChatGPT', logo: '/tools/ChatGPT.png', color: 'from-green-100 to-green-50' },
+    { name: 'Gemini', logo: '/tools/Gemini.png', color: 'from-blue-100 to-blue-50' },
+    { name: 'Make', logo: '/tools/Make.png', color: 'from-orange-100 to-orange-50' },
+    { name: 'Notion', logo: '/tools/Notion.png', color: 'from-gray-100 to-gray-50' },
+    { name: 'Perplexity', logo: '/tools/Perplexity.png', color: 'from-indigo-100 to-indigo-50' },
+    { name: 'Canva', logo: '/tools/Canva.png', color: 'from-pink-100 to-pink-50' },
   ];
 
   return (
