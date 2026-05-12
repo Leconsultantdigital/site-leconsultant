@@ -8,20 +8,31 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0F172A',      // Bleu-noir très foncé
-        secondary: '#3B82F6',    // Bleu vif
-        accent: '#06B6D4',       // Cyan moderne
-        success: '#10B981',      // Vert émeraude
-        warning: '#F59E0B',      // Amber
-        danger: '#EF4444',       // Rouge
-        // Nouveaux : gradients friendly
-        'gradient-start': '#0F172A',
-        'gradient-mid': '#1E40AF',
-        'gradient-end': '#06B6D4',
+        // Claude Design Palette
+        yellow: '#FFD200',
+        'yellow-light': '#FFE566',
+        'yellow-dark': '#C9A600',
+        'yellow-bg': '#FFFBE6',
+
+        dark: '#1C1C2E',
+        'dark-2': '#2E2E44',
+        mid: '#6B7280',
+        muted: '#9CA3AF',
+        border: '#E5E7EB',
+        'bg-light': '#F4F6F8',
+        'bg-white': '#FFFFFF',
+
+        // Semantic aliases
+        primary: '#1C1C2E',
+        secondary: '#1AB4F5',
+        accent: '#FFD200',
+        success: '#22C55E',
+        warning: '#F59E0B',
+        danger: '#E53935',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Comfortaa', 'Trebuchet MS', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Comfortaa', 'Trebuchet MS', 'system-ui', 'sans-serif'],
       },
       spacing: {
         '128': '32rem',
