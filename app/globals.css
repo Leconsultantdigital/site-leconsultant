@@ -141,9 +141,9 @@ p {
 }
 
 .btn-accent {
-  @apply bg-yellow text-dark;
+  @apply bg-yellow text-black;
   box-shadow: 0 6px 18px rgba(255, 210, 0, 0.35);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .btn-accent:hover {
@@ -459,14 +459,4 @@ button, a {
 /* ── Hero Button Pulse ────────────────────────────────────── */
 .btn-accent {
   position: relative;
-}
-
-.btn-accent::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: inherit;
-  border-radius: inherit;
-  opacity: 0;
-  animation: pulseGlow 2s infinite;
 }

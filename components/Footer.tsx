@@ -12,9 +12,9 @@ export default function Footer() {
               <Image
                 src="/logo.jpg"
                 alt="Le Consultant Digital"
-                width={35}
-                height={35}
-                className="h-8 w-auto"
+                width={50}
+                height={50}
+                className="h-[50px] w-auto"
               />
             </Link>
             <p className="text-mid text-sm leading-relaxed">

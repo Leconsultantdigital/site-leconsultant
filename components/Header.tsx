@@ -15,9 +15,9 @@ export default function Header() {
           <Image
             src="/logo.jpg"
             alt="Le Consultant Digital"
-            width={40}
-            height={40}
-            className="h-10 w-auto"
+            width={50}
+            height={50}
+            className="h-[50px] w-auto"
             priority
           />
         </Link>
