@@ -32,16 +32,16 @@ export const SERVICES = [
     href: '/services/directeur-marketing',
   },
   {
-    id: 'jury-certification',
+    id: 'visibilite-locale',
     num: '03',
-    icon: 'award',
-    title: 'Jury Certification IA',
-    pitch: 'Certification RS6776 officielle (RNCP). Évaluation de vos collaborateurs.',
+    icon: 'map',
+    title: 'Visibilité Locale Google',
+    pitch: 'Optimisation de votre fiche Google Business. Apparaître en local pack et augmenter vos appels.',
     bullets: [
-      'Évaluation officielle RS6776',
-      'Sessions individuelles ou groupe',
-      'Certification reconnue RNCP',
-      'Expertise B2B reconnue',
+      'Optimisation profil Google Business',
+      '15+ photos, avis, posts réguliers',
+      'Local pack top 3 (géo-ciblée)',
+      'Stratégie avis 4.8+/5 garantie',
     ],
     href: '/about',
   },
@@ -121,7 +121,7 @@ export const FAQ_ITEMS = [
 
 export const TRUST_ITEMS = [
   { num: '600', label: 'professionnels formés', icon: 'users' },
-  { num: '120', sublabel: '/5', label: 'avis Google certifiés', icon: 'star' },
+  { num: '5', sublabel: '/5', label: '120 avis Google certifiés', icon: 'star' },
   { num: '15', sublabel: '+ ans', label: 'd\'expertise digitale', icon: 'badge' },
 ];
 
