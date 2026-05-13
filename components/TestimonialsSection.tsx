@@ -1,6 +1,6 @@
 'use client';
 
-import ReviewCarousel from '@/components/ReviewCarousel';
+import ReviewCarouselNew from '@/components/ReviewCarouselNew';
 import { REVIEWS } from '@/lib/data';
 
 export default function TestimonialsSection() {
@@ -20,7 +20,7 @@ export default function TestimonialsSection() {
 
         {/* Review Carousel */}
         <div className="max-w-4xl mx-auto mb-12">
-          <ReviewCarousel reviews={REVIEWS} autoScroll={true} interval={6000} />
+          <ReviewCarouselNew reviews={REVIEWS} autoScroll={true} interval={6000} />
         </div>
 
         {/* Call-to-action */}

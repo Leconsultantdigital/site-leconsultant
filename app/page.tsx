@@ -1,13 +1,15 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import HeroSection from '@/components/HeroSection';
-import ServicesGrid from '@/components/ServicesGrid';
-import ToolsSection from '@/components/ToolsSection';
+import HeroMinimal from '@/components/HeroMinimal';
 import LogoCarousel from '@/components/LogoCarousel';
-import TestimonialsSection from '@/components/TestimonialsSection';
+import ServicesComparison from '@/components/ServicesComparison';
+import FeaturesGrid from '@/components/FeaturesGrid';
+import ReviewCarouselNew from '@/components/ReviewCarouselNew';
+import StatsNew from '@/components/StatsNew';
 import BioBlock from '@/components/BioBlock';
 import FAQSection from '@/components/FAQSection';
 import FinalCTA from '@/components/FinalCTA';
+import { REVIEWS } from '@/lib/data';
 
 export default function Home() {
   return (
@@ -15,16 +17,10 @@ export default function Home() {
       <Header />
 
       <main className="flex-grow">
-        {/* Hero Section */}
-        <HeroSection variant="photo" />
+        {/* 1. Hero — Épuré et centré */}
+        <HeroMinimal />
 
-        {/* Services Grid */}
-        <ServicesGrid />
-
-        {/* NEW: Tools Section (position 3) */}
-        <ToolsSection />
-
-        {/* Logo Carousel Section */}
+        {/* 2. Logo Carousel — Crédibilité immédiate */}
         <LogoCarousel
           partners={[
             { name: 'Clarsi', logo: '/tools/Clarsi.png' },
@@ -37,16 +33,25 @@ export default function Home() {
           ]}
         />
 
-        {/* Testimonials Section (Carousel with Reviews) */}
-        <TestimonialsSection />
+        {/* 3. Services Comparison — Layout asymétrique */}
+        <ServicesComparison />
 
-        {/* Bio/About Block */}
+        {/* 4. Features Grid — Avantages clés */}
+        <FeaturesGrid />
+
+        {/* 5. Testimonials Carousel — Auto-scroll */}
+        <ReviewCarouselNew reviews={REVIEWS} autoScroll={true} interval={6000} />
+
+        {/* 6. Stats — 4 cartes avec chiffres clés */}
+        <StatsNew />
+
+        {/* 7. Bio/About Block */}
         <BioBlock />
 
-        {/* FAQ Section */}
+        {/* 8. FAQ Section */}
         <FAQSection />
 
-        {/* Final CTA */}
+        {/* 9. Final CTA */}
         <FinalCTA />
       </main>
 
