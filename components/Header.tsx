@@ -36,15 +36,15 @@ export default function Header() {
             {/* Dropdown Menu */}
             <div className="absolute left-0 mt-2 w-56 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               <Link href="/services/formation-ia" className="block px-4 py-3 text-mid font-medium hover:bg-yellow/10 hover:text-dark transition border-b border-border/50">
-                🎓 Formation IA
+                🎓 Formation IA générative
                 <p className="text-xs text-mid mt-1">3 jours, 100% pratique</p>
               </Link>
               <Link href="/services/consulting-ia" className="block px-4 py-3 text-mid font-medium hover:bg-yellow/10 hover:text-dark transition border-b border-border/50">
-                🚀 Consulting IA
+                🚀 Consultant IA
                 <p className="text-xs text-mid mt-1">Audit gratuit, stratégie personnalisée</p>
               </Link>
               <Link href="/services/consultant-marketing" className="block px-4 py-3 text-mid font-medium hover:bg-yellow/10 hover:text-dark transition">
-                📈 Consultant Marketing
+                📈 Consultant marketing
                 <p className="text-xs text-mid mt-1">Directeur marketing externalisé</p>
               </Link>
               <div className="border-t border-border/50 px-4 py-2 bg-gray-50">
@@ -89,13 +89,13 @@ export default function Header() {
               {mobileServicesOpen && (
                 <div className="ml-4 space-y-2 mt-2 border-l-2 border-yellow/50 pl-3">
                   <Link href="/services/formation-ia" className="block text-mid hover:text-dark transition py-2">
-                    🎓 Formation IA
+                    🎓 Formation IA générative
                   </Link>
                   <Link href="/services/consulting-ia" className="block text-mid hover:text-dark transition py-2">
-                    🚀 Consulting IA
+                    🚀 Consultant IA
                   </Link>
                   <Link href="/services/consultant-marketing" className="block text-mid hover:text-dark transition py-2">
-                    📈 Consultant Marketing
+                    📈 Consultant marketing
                   </Link>
                   <Link href="/services/consultant-marketing/visibilite-locale" className="block text-sm text-mid hover:text-dark transition py-2 ml-4">
                     └─ Visibilité Locale
