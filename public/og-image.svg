@@ -1,0 +1,55 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="gradBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1C1C2E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#252532;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#gradBg)"/>
+
+  <!-- Yellow Accent Bar (right) -->
+  <rect x="1050" y="0" width="150" height="630" fill="#FFD200"/>
+
+  <!-- Content Area -->
+  <g>
+    <!-- Main Heading -->
+    <text x="100" y="120" font-family="Comfortaa, Arial, sans-serif" font-size="72" font-weight="bold" fill="white">
+      Consultant IA
+    </text>
+    <text x="100" y="210" font-family="Comfortaa, Arial, sans-serif" font-size="72" font-weight="bold" fill="#FFD200">
+      Générative
+    </text>
+
+    <!-- Subheading -->
+    <text x="100" y="290" font-family="Comfortaa, Arial, sans-serif" font-size="36" fill="#E0E0E0">
+      #1 en France
+    </text>
+
+    <!-- Description -->
+    <text x="100" y="370" font-family="Arial, sans-serif" font-size="24" fill="#B0B0B0">
+      ChatGPT • Claude • Make.com • Marketing
+    </text>
+
+    <!-- CTA Text -->
+    <text x="100" y="480" font-family="Arial, sans-serif" font-size="20" fill="#FFD200" font-weight="bold">
+      Du concret, pas du rêve.
+    </text>
+
+    <!-- URL -->
+    <text x="100" y="570" font-family="Arial, sans-serif" font-size="16" fill="#808080">
+      leconsultantdigital.fr
+    </text>
+  </g>
+
+  <!-- Decorative Circle (top right) -->
+  <circle cx="980" cy="100" r="60" fill="#FFD200" opacity="0.15"/>
+
+  <!-- Logo Placeholder (top left) -->
+  <circle cx="70" cy="70" r="40" fill="#FFD200"/>
+  <text x="70" y="85" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1C1C2E" text-anchor="middle">
+    ⚡
+  </text>
+</svg>

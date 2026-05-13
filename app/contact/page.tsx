@@ -2,6 +2,8 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import { trackFormSubmission } from '@/lib/analytics';
 import { useState } from 'react';
 
 export default function Contact() {
@@ -17,10 +19,39 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Ici, vous intégreriez un service d'email (Brevo, SendGrid, etc.)
-    console.log('Form data:', formData);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: `Service: ${formData.service}\nTéléphone: ${formData.phone || 'Non fourni'}\n\n${formData.message}`,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        console.error('API error:', data.error);
+      }
+
+      setSubmitted(true);
+      trackFormSubmission('contact');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: 'consulting-ia',
+        message: '',
+      });
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (error) {
+      console.error('Submit error:', error);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -30,6 +61,12 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <BreadcrumbSchema
+        items={[
+          { name: 'Accueil', path: '/' },
+          { name: 'Contact', path: '/contact' },
+        ]}
+      />
       <Header />
 
       <main className="flex-grow">

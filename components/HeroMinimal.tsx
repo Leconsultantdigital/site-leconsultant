@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { trackCTAClick, trackCalendlyClick } from '@/lib/analytics';
 
 export default function HeroMinimal() {
   return (
@@ -31,6 +32,7 @@ export default function HeroMinimal() {
           <Link
             href="/contact"
             className="btn btn-accent btn-lg"
+            onClick={() => trackCTAClick('Commencer gratuitement', 'hero')}
           >
             Commencer gratuitement →
           </Link>
@@ -39,6 +41,7 @@ export default function HeroMinimal() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-ghost btn-lg border-2"
+            onClick={() => trackCalendlyClick()}
           >
             Voir ma disponibilité
           </Link>

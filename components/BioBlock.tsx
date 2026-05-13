@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { BIO } from '@/lib/data';
 
@@ -10,9 +11,14 @@ export default function BioBlock() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Left: Photo placeholder */}
           <div className="relative hidden md:block">
-            <div className="aspect-square max-w-md mx-auto bg-gray-200 rounded-3xl overflow-hidden shadow-lg flex items-center justify-center text-gray-400" role="img" aria-label="William Martin - Portrait">
-              Photo William Martin
-            </div>
+            <Image
+              src="/william-placeholder.svg"
+              alt="William Martin - Consultant IA et formateur"
+              width={400}
+              height={500}
+              priority={true}
+              className="max-w-md mx-auto rounded-3xl shadow-lg object-cover"
+            />
           </div>
 
           {/* Right: Content */}
