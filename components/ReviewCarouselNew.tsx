@@ -119,7 +119,7 @@ export default function ReviewCarouselNew({
               Réserver audit gratuit 15min →
             </a>
             <a
-              href="https://calendly.com/williammartin"
+              href="https://calendar.app.google/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-ghost border-2 btn-lg"

@@ -22,7 +22,7 @@ export default function FinalCTA() {
             Demander un devis →
           </Link>
           <a
-            href="https://calendly.com/williammartin"
+            href="https://calendar.app.google/"
             className="btn btn-ghost btn-lg border-2 border-white text-white hover:bg-white hover:text-dark"
             target="_blank"
             rel="noopener noreferrer"

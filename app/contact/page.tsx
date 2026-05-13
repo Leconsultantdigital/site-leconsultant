@@ -209,7 +209,7 @@ export default function Contact() {
                     Réservez directement un créneau sur Calendly :
                   </p>
                   <a
-                    href="https://calendly.com"
+                    href="https://calendar.app.google/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary text-center block"

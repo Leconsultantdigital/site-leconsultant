@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
             <a href="/contact" className="btn btn-accent">
               Réserver audit gratuit 15min →
             </a>
-            <a href="https://calendly.com/williammartin" className="btn btn-ghost border-2">
+            <a href="https://calendar.app.google/" className="btn btn-ghost border-2">
               Voir ma disponibilité
             </a>
           </div>

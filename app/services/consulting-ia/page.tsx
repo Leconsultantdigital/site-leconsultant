@@ -1,265 +1,275 @@
+'use client';
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Link from 'next/link';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Consulting IA & Formation ChatGPT | Le Consultant Digital',
-  description: 'Formations ChatGPT, Claude, Gemini. Consulting IA générative. Méthode RACEF. Du concret pour entrepreneurs et PME.',
-  keywords: ['formation ChatGPT', 'consulting IA', 'formation Claude', 'Make.com', 'LinkedIn B2B'],
-};
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import { trackCTAClick, trackServiceView } from '@/lib/analytics';
+import { useEffect } from 'react';
 
 export default function ConsultingIA() {
+  useEffect(() => {
+    trackServiceView('consulting-ia');
+  }, []);
+
+  const handleCTAClick = (ctaText: string) => {
+    trackCTAClick(ctaText, 'consulting-ia');
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
+      <BreadcrumbSchema
+        items={[
+          { name: 'Accueil', path: '/' },
+          { name: 'Services', path: '/' },
+          { name: 'Consulting IA', path: '/services/consulting-ia' },
+        ]}
+      />
       <Header />
 
       <main className="flex-grow">
-        {/* Hero */}
-        <section className="bg-gradient-to-b from-blue-50 to-white py-16">
-          <div className="container max-w-3xl">
-            <h1 className="text-4xl font-bold mb-4">
-              Formations IA Générative & Consulting Digital
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              ChatGPT, Claude, Make.com, LinkedIn B2B. <strong>Du concret</strong>, pas des buzzwords.
-            </p>
-            <div className="flex gap-4">
-              <Link href="/contact" className="btn-primary">
-                Réserver Audit Gratuit
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Pourquoi cette prestation */}
-        <section className="py-12">
-          <div className="container max-w-3xl">
-            <h2 className="text-2xl font-bold mb-6">Pourquoi le Consulting IA ?</h2>
-            <p className="text-gray-700 mb-4">
-              L'IA générative change tout en 2025-2026. Les entrepreneurs et PME qui ne l'intègrent pas perdent 6-12 mois de compétitivité.
-            </p>
-            <p className="text-gray-700 mb-4">
-              Je vous aide à <strong>maîtriser les outils</strong> (ChatGPT, Claude, Gemini, Make.com) pour :
-            </p>
-            <ul className="space-y-2 text-gray-700 mb-6">
-              <li>✓ Gagner 10h/semaine en productivité</li>
-              <li>✓ Créer du contenu marketing en 1/3 du temps</li>
-              <li>✓ Automatiser vos workflows (Make.com)</li>
-              <li>✓ Maîtriser le LinkedIn B2B avec IA</li>
-              <li>✓ Former vos salariés à l'IA</li>
-            </ul>
-          </div>
-        </section>
-
-        {/* Qu'est inclus */}
-        <section className="py-12 bg-gray-50">
-          <div className="container max-w-3xl">
-            <h2 className="text-2xl font-bold mb-6">Ce Qui Est Inclus</h2>
-
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-bold text-lg mb-2">📚 Formation ChatGPT Niveau 1</h3>
-                <p className="text-gray-700 mb-2">2-4 heures | Groupe ou 1:1</p>
-                <p className="text-gray-600">
-                  Les 50 prompts essentiels. Cas d'usage marketing, contenu, productivité. Pratique 100%.
-                </p>
+        {/* HERO SECTION */}
+        <section className="bg-gradient-to-br from-blue-50 to-white py-20">
+          <div className="container max-w-4xl">
+            <div className="text-center">
+              <div className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                🚀 Consulting IA Générative
               </div>
-
-              <div>
-                <h3 className="font-bold text-lg mb-2">🤖 Consulting IA Générative</h3>
-                <p className="text-gray-700 mb-2">Session diagnostic | 1-2h</p>
-                <p className="text-gray-600">
-                  Audit de votre stratégie IA. Outils à adopter. Plan d'action personnalisé (30 jours, 90 jours).
-                </p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-lg mb-2">⚙️ Atelier Make.com</h3>
-                <p className="text-gray-700 mb-2">4 heures | Groupe ou 1:1</p>
-                <p className="text-gray-600">
-                  Automatisez vos workflows. Intégrez vos outils (Notion, Airtable, Zapier). ROI immédiat.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-lg mb-2">📱 Formation LinkedIn B2B + IA</h3>
-                <p className="text-gray-700 mb-2">3 heures | Groupe ou 1:1</p>
-                <p className="text-gray-600">
-                  Maîtrisez le LinkedIn. Générez des leads B2B. Utilisez Claude/ChatGPT pour optimiser.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-lg mb-2">🎓 Formation Claude (Avancée)</h3>
-                <p className="text-gray-700 mb-2">2-4 heures | Groupe ou 1:1</p>
-                <p className="text-gray-600">
-                  Claude vs ChatGPT. Cas d'usage spécialisés. API Claude pour développeurs.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Ma Méthodologie */}
-        <section className="py-12">
-          <div className="container max-w-3xl">
-            <h2 className="text-2xl font-bold mb-6">Ma Méthodologie : 3 Phases Structurées</h2>
-            <p className="text-gray-700 mb-6">
-              Chaque formation/consulting suit ce processus pour garantir des résultats mesurables et durables :
-            </p>
-
-            <div className="space-y-6">
-              <div className="border-l-4 border-blue-600 pl-4">
-                <h3 className="font-bold text-lg mb-2">Phase 1 — Audit & Diagnostic</h3>
-                <p className="text-gray-700">
-                  Je comprends votre contexte, vos enjeux, vos outils actuels et vos objectifs réels. Pas de solution généralisée.
-                </p>
-                <p className="text-gray-600 text-sm mt-2"><strong>Durée :</strong> 1-2 sessions (1-2h total)</p>
-              </div>
-
-              <div className="border-l-4 border-blue-600 pl-4">
-                <h3 className="font-bold text-lg mb-2">Phase 2 — Formation Intensive & Pratique</h3>
-                <p className="text-gray-700">
-                  Formation en petits groupes (max 8 personnes) 100% adaptée à votre métier. Hands-on sur vos cas réels.
-                </p>
-                <ul className="text-gray-700 mt-2 space-y-1 text-sm">
-                  <li>✓ Fondamentaux + cas d'usage spécifiques</li>
-                  <li>✓ Utilisation d'outils (ChatGPT, Claude, Make.com, LinkedIn)</li>
-                  <li>✓ Création de ressources réutilisables pour votre équipe</li>
-                </ul>
-                <p className="text-gray-600 text-sm mt-2"><strong>Durée :</strong> 2-4 heures selon besoins</p>
-              </div>
-
-              <div className="border-l-4 border-blue-600 pl-4">
-                <h3 className="font-bold text-lg mb-2">Phase 3 — Suivi & Optimisation</h3>
-                <p className="text-gray-700">
-                  Post-formation, vous n'êtes pas seul. Accès à ma documentation, questions par Slack, ajustements nécessaires.
-                </p>
-                <ul className="text-gray-700 mt-2 space-y-1 text-sm">
-                  <li>✓ Suivi 30 jours gratuit</li>
-                  <li>✓ Itération sur vos workflows</li>
-                  <li>✓ Option : passage à du consulting récurrent (Directeur Marketing IA-powered)</li>
-                </ul>
-                <p className="text-gray-600 text-sm mt-2"><strong>Durée :</strong> Variable selon besoin</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Cas client */}
-        <section className="py-12 bg-gray-50">
-          <div className="container max-w-3xl">
-            <h2 className="text-2xl font-bold mb-6">Cas Client</h2>
-
-            <div className="bg-white p-6 rounded-lg border-l-4 border-accent">
-              <h3 className="font-bold text-lg mb-2">PME Marketing | +300% Leads en 3 Mois</h3>
-              <p className="text-sm text-gray-600 mb-4">
-                Secteur: Marketing Digital | Taille: 15 salariés
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
+                Transformez votre activité avec l'<span className="text-yellow-400">IA</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Audit IA gratuit, stratégie personnalisée, mise en place workflows. 15 ans d'expérience, approche RACEF structurée.
               </p>
-              <div>
-                <p className="text-gray-700 mb-4">
-                  <strong>Situation initiale :</strong> Équipe sans IA, processus manuels, 20 leads/mois
-                </p>
-                <p className="text-gray-700 mb-4">
-                  <strong>Intervention :</strong> Formation ChatGPT (équipe), consulting Make.com, mise en place workflows
-                </p>
-                <p className="text-gray-700">
-                  <strong>Résultat :</strong> 60+ leads/mois, productivité +4h/j par personne, ROI = 600%
-                </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={() => handleCTAClick('Réserver audit gratuit')}
+                  className="btn-primary text-center"
+                >
+                  Réserver Audit Gratuit (30 min)
+                </button>
+                <a
+                  href="https://calendar.app.google/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => handleCTAClick('Calendly consulting')}
+                  className="btn-accent text-center"
+                >
+                  Voir mes disponibilités
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Pricing */}
-        <section className="py-12">
-          <div className="container max-w-3xl">
-            <h2 className="text-2xl font-bold mb-6">Tarifs & Packages</h2>
+        {/* TRUST BAR - TrustIndex */}
+        <section className="py-12 bg-white border-y">
+          <div className="container max-w-4xl">
+            <p className="text-center text-gray-600 mb-6 font-semibold">Plus de 500 entrepreneurs & PME transformés</p>
+            <div className="flex justify-center">
+              <script defer async src='https://cdn.trustindex.io/loader.js?529b449420543948b996f640a31'></script>
+            </div>
+          </div>
+        </section>
 
+        {/* DESCRIPTION LONGUE */}
+        <section className="py-16 bg-white">
+          <div className="container max-w-3xl">
+            <h2 className="text-3xl font-bold mb-8">Pourquoi ce consulting?</h2>
+            <div className="prose prose-lg max-w-none text-gray-700">
+              <p>
+                Le <strong>consulting IA</strong>, c'est la vraie transformation. Une formation, c'est génial. Mais transformer votre stratégie digitale, structurer votre approche IA, intégrer les outils dans vos processus — c'est un travail d'accompagnement.
+              </p>
+              <p>
+                Je vous aide à <strong>auditer</strong> où vous en êtes avec l'IA. Quels outils utilisez-vous vraiment ? Où gaspillez-vous du temps ? Où manquez-vous d'innovation ? Ensuite, on co-construit une <strong>stratégie IA</strong> adaptée à votre PME ou structure.
+              </p>
+              <p>
+                Le consulting IA, c'est aussi l'intégration technique — connecter ChatGPT ou Claude avec vos outils existants (CRM, email, Make.com), automatiser vos workflows critiques, former progressivement vos équipes. C'est du sur-mesure.
+              </p>
+              <p>
+                Pendant ce travail, <strong>j'apprends à vos équipes à prompter comme des pros avec la méthode RACEF</strong> — une approche structurée pour extraire le maximum de vos outils IA et garantir des résultats mesurables. Pas de vague « digital transformation » mais du concret : combien de temps économisé ? Quel impact sur vos marges ?
+              </p>
+              <p>
+                <strong>Pour qui ?</strong> Entrepreneurs qui veulent innover vite, PME qui se demandent par où commencer avec l'IA, structures qui cherchent un partenaire de confiance pour une vraie transformation.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* INCLUSIONS */}
+        <section className="py-16 bg-gray-50">
+          <div className="container max-w-3xl">
+            <h2 className="text-3xl font-bold mb-12">Qu'est-ce qui est inclus?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="border rounded-lg p-6">
-                <h3 className="font-bold text-lg mb-2">Formation Seule</h3>
-                <p className="text-3xl font-bold text-accent mb-4">€500-1500</p>
-                <ul className="space-y-2 text-sm">
-                  <li>✓ 2-4 heures</li>
-                  <li>✓ 1:1 ou groupe</li>
-                  <li>✓ Support post-formation</li>
-                </ul>
+              {[
+                { icon: '🔍', title: 'Audit initial', desc: '0.5 jour : diagnostic outils, gisements IA, budget estimé' },
+                { icon: '📋', title: 'Stratégie IA personnalisée', desc: 'Document détaillé avec objectifs, roadmap, budget, KPIs' },
+                { icon: '⚙️', title: 'Intégration technique', desc: 'Mise en place 3-5 workflows IA (Make.com, APIs, automations)' },
+                { icon: '👥', title: 'Formation équipes', desc: '3-4 sessions de 2h pour maîtriser les nouveaux workflows' },
+                { icon: '📊', title: 'Suivi & optimisation', desc: 'Réunion mensuelle (1h) pendant 6 mois minimum' },
+                { icon: '📚', title: 'Accès documentations', desc: 'Templates RACEF et ressources infinies (mises à jour continue)' },
+              ].map((item, i) => (
+                <div key={i} className="bg-white p-6 rounded-lg">
+                  <div className="text-3xl mb-3">{item.icon}</div>
+                  <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CASE STUDY */}
+        <section className="py-16 bg-white">
+          <div className="container max-w-3xl">
+            <h2 className="text-3xl font-bold mb-8">Cas client: Consultant indépendant</h2>
+            <div className="bg-green-50 border-l-4 border-green-500 p-8 rounded">
+              <h3 className="font-bold text-xl mb-4">💰 Stratégie IA + 5 workflows = +3000€/mois de CA</h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <p className="text-sm text-gray-600 font-semibold mb-2">CONTEXTE</p>
+                  <p className="text-gray-700">Freelancer avec 15 clients, workload trop élevé, pas scalable. Perte de temps sur tâches répétitives, pas d'automatisation.</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-600 font-semibold mb-2">SOLUTION</p>
+                  <p className="text-gray-700">Audit IA + mise en place 5 workflows automatisés (proposals, suivi clients, reporting, factures, prospection).</p>
+                </div>
               </div>
 
-              <div className="border rounded-lg p-6 bg-blue-50">
-                <h3 className="font-bold text-lg mb-2">Consulting + Formation</h3>
-                <p className="text-3xl font-bold text-accent mb-4">€2000-5000</p>
-                <ul className="space-y-2 text-sm">
-                  <li>✓ Audit complet</li>
-                  <li>✓ 2-3 sessions formation</li>
-                  <li>✓ Plan d'action personnalisé</li>
-                  <li>✓ Suivi 30 jours</li>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-white p-4 rounded">
+                  <p className="text-sm text-gray-600 mb-1">⏱️ Temps libéré</p>
+                  <p className="text-2xl font-bold text-green-600">-40%</p>
+                  <p className="text-xs text-gray-500">5-8h/semaine d'opérationnel automatisé</p>
+                </div>
+                <div className="bg-white p-4 rounded">
+                  <p className="text-sm text-gray-600 mb-1">💵 CA additionnel</p>
+                  <p className="text-2xl font-bold text-green-600">+3000€/mois</p>
+                  <p className="text-xs text-gray-500">Grâce au temps libéré pour business dev</p>
+                </div>
+                <div className="bg-white p-4 rounded">
+                  <p className="text-sm text-gray-600 mb-1">😊 Satisfaction client</p>
+                  <p className="text-2xl font-bold text-green-600">+25%</p>
+                  <p className="text-xs text-gray-500">Réponses + rapides et fiables</p>
+                </div>
+                <div className="bg-white p-4 rounded">
+                  <p className="text-sm text-gray-600 mb-1">🎯 ROI</p>
+                  <p className="text-2xl font-bold text-green-600">10x</p>
+                  <p className="text-xs text-gray-500">En 6 mois (consulting + workflows)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* PRICING */}
+        <section className="py-16 bg-gray-50">
+          <div className="container max-w-3xl">
+            <h2 className="text-3xl font-bold mb-12 text-center">Tarification</h2>
+            <div className="space-y-6">
+              {/* Audit */}
+              <div className="bg-white rounded-lg p-8 border-2 border-blue-200">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-2xl font-bold">Audit IA Initial</h3>
+                  <span className="text-3xl font-bold text-blue-600">Gratuit</span>
+                </div>
+                <p className="text-gray-700">Demi-journée de diagnostic complet. Pas d'engagement. Vous recevez un rapport détaillé avec recommandations.</p>
+              </div>
+
+              {/* Accompagnement */}
+              <div className="bg-white rounded-lg p-8 border-2 border-yellow-400">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-2xl font-bold">Accompagnement & Mise en place</h3>
+                  <span className="text-3xl font-bold text-yellow-600">650€/jour</span>
+                </div>
+                <p className="text-gray-700 mb-6">À la carte, selon vos besoins. Pas d'engagement minimum — vous payez que ce que vous utilisez.</p>
+                <ul className="space-y-2 text-gray-700">
+                  <li>✅ Mise en place workflows IA</li>
+                  <li>✅ Formation équipes</li>
+                  <li>✅ Intégrations techniques</li>
+                  <li>✅ Optimisations continues</li>
                 </ul>
               </div>
             </div>
 
-            <p className="text-center text-gray-600 mt-8 text-sm">
-              Tarif sur devis pour formations équipes (10+ personnes)
-            </p>
+            <div className="mt-8 text-center">
+              <p className="text-gray-600 mb-6">
+                Besoin d'une estimation? Parlons de votre projet.
+              </p>
+              <button
+                onClick={() => handleCTAClick('Demander devis consulting')}
+                className="btn-primary text-center inline-block"
+              >
+                Demander une Estimation
+              </button>
+            </div>
           </div>
         </section>
 
-        {/* FAQ Service */}
-        <section className="py-12 bg-gray-50">
+        {/* FAQ */}
+        <section className="py-16 bg-white">
           <div className="container max-w-3xl">
-            <h2 className="text-2xl font-bold mb-6">Questions sur Ce Service</h2>
-
+            <h2 className="text-3xl font-bold mb-12 text-center">Questions fréquentes</h2>
             <div className="space-y-4">
               {[
-                { q: "Quelle est la durée d'une formation ?", a: "2-4 heures selon le sujet. Flexible selon vos disponibilités." },
-                { q: "Peut-on faire du sur-mesure ?", a: "Oui, 100%. Chaque formation s'adapte à votre contexte métier. Phase 1 diagnostique le besoin exact." },
-                { q: "Quel est le ROI d'une formation IA ?", a: "En moyenne 3-6x en 30 jours. +10h productivité/semaine/personne selon les cas d'usage." },
-                { q: "Vous formez les équipes aussi ?", a: "Oui, en petits groupes de 2-8 personnes max. Plus efficace pour la pratique et les questions." },
-                { q: "Puis-je passer à du consulting plus récurrent après ?", a: "Oui, beaucoup de clients passent à du Directeur Marketing IA-powered après une formation initiale. Voir service Directeur Marketing." },
+                {
+                  q: "Qu'est-ce que le consulting IA exactement?",
+                  a: "C'est un accompagnement complet pour transformer votre activité avec l'IA. Audit, stratégie personnalisée, mise en place workflows, formation équipes. Du diagnostic jusqu'à l'optimisation."
+                },
+                {
+                  q: "Combien coûte un audit IA?",
+                  a: "L'audit initial (0.5 jour) est gratuit. Pas d'engagement. Vous recevez un rapport détaillé avec recommandations. Après, l'accompagnement se fait à la carte à 650€/jour."
+                },
+                {
+                  q: "Quel est l'engagement minimum?",
+                  a: "Pas d'engagement minimum. Vous payez à la journée pour l'accompagnement et la mise en place. Certains clients travaillent avec nous 3-6 mois, d'autres plus longtemps."
+                },
+                {
+                  q: "Comment fonctionne la mise en place des workflows?",
+                  a: "On identifie les processus critiques à automatiser, on les met en place (Make.com, APIs, scripts), puis on forme vos équipes à les utiliser. C'est progressif et sans risque."
+                },
+                {
+                  q: "Pouvez-vous m'aider à intégrer avec mon système actuel?",
+                  a: "Oui, c'est notre spécialité. CRM, ERP, email, bases de données — on connecte ChatGPT/Claude avec vos outils existants via API ou Make.com."
+                },
+                {
+                  q: "Quels résultats puis-je attendre?",
+                  a: "Ça dépend de vos objectifs. En général : temps économisé (20-40h/mois), réduction erreurs, scalabilité, amélioration productivity. On mesure tout avec des KPIs clairs."
+                },
               ].map((item, i) => (
-                <details key={i} className="bg-white p-4 rounded-lg cursor-pointer">
-                  <summary className="font-bold">{item.q}</summary>
-                  <p className="mt-3 text-gray-700">{item.a}</p>
+                <details key={i} className="bg-gray-50 p-4 rounded cursor-pointer group">
+                  <summary className="font-bold text-gray-900">{item.q}</summary>
+                  <p className="mt-4 text-gray-700 text-sm">{item.a}</p>
                 </details>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Étape suivante */}
-        <section className="py-12 bg-blue-50">
-          <div className="container max-w-3xl">
-            <h2 className="text-2xl font-bold mb-6">Étape Suivante : Passer au Directeur Marketing IA-Powered</h2>
-            <p className="text-gray-700 mb-6">
-              Après cette formation/consulting, si vous souhaitez une stratégie marketing plus complète et du soutien récurrent (stratégie, SEO, contenu, LinkedIn, leads)...
+        {/* FINAL CTA */}
+        <section className="py-16 bg-gradient-to-r from-yellow-50 to-blue-50">
+          <div className="container max-w-3xl text-center">
+            <h2 className="text-4xl font-bold mb-6">Commençons par auditer votre situation</h2>
+            <p className="text-lg text-gray-700 mb-8">
+              30 minutes d'audit gratuit pour comprendre vos besoins et proposer un plan d'action.
             </p>
-            <div className="bg-white p-6 rounded-lg border-l-4 border-blue-600 mb-6">
-              <h3 className="font-bold text-lg mb-2">📊 Directeur Marketing Externalisé (IA-Powered)</h3>
-              <p className="text-gray-700 mb-4">
-                Une prestation <strong>récurrente</strong> : stratégie mensuelle + exécution en continu. Facture de €1500-5000/mois.
-              </p>
-              <p className="text-gray-600 text-sm mb-4">
-                Parfait pour les entrepreneurs qui veulent <strong>grandir sans recruter</strong> un CMO à temps plein.
-              </p>
-              <Link href="/services/directeur-marketing" className="text-blue-600 font-bold hover:text-blue-800">
-                En Savoir Plus sur le Directeur Marketing →
-              </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={() => handleCTAClick('Réserver audit gratuit - CTA')}
+                className="btn-primary text-center"
+              >
+                Réserver Audit Gratuit
+              </button>
+              <a
+                href="https://calendar.app.google/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => handleCTAClick('Calendly consulting - CTA')}
+                className="btn-accent text-center"
+              >
+                Voir mes disponibilités
+              </a>
             </div>
-          </div>
-        </section>
-
-        {/* CTA Final */}
-        <section className="py-12 bg-gradient-to-r from-primary to-blue-700 text-white text-center">
-          <div className="container">
-            <h2 className="text-2xl font-bold mb-4">Prêt à Maîtriser l'IA ?</h2>
-            <p className="mb-6 max-w-2xl mx-auto">
-              Réservez un audit gratuit (30 min) pour évaluer vos besoins en formation/consulting.
-            </p>
-            <Link href="/contact" className="bg-white text-primary px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition inline-block">
-              Audit Gratuit
-            </Link>
           </div>
         </section>
       </main>

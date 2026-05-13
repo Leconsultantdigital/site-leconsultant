@@ -37,7 +37,7 @@ export default function HeroMinimal() {
             Commencer gratuitement →
           </Link>
           <Link
-            href="https://calendly.com/williammartin"
+            href="https://calendar.app.google/"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-ghost btn-lg border-2"
