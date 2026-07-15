@@ -1,9 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { TRUST_ITEMS } from '@/lib/data';
-import StatCounter from './StatCounter';
-import { UsersIcon, StarIcon, BadgeIcon } from './Icons';
 
 export type HeroVariant = 'photo' | 'typo' | 'split' | 'centered';
 
@@ -18,60 +15,27 @@ function HeroPhoto() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Left: Text */}
           <div className="animate-fadeInLeft">
-            {/* Pill */}
-            <div className="inline-flex items-center gap-3 mb-8 bg-white border border-border rounded-full px-4 py-2">
-              <span className="bg-yellow text-dark px-3.5 py-1 rounded-full text-xs font-bold flex items-center justify-center min-w-[80px]">✨ NOUVEAU</span>
-              <span className="text-sm font-medium text-dark py-1.5">Programme IA — 30 jours pour intégrer</span>
-            </div>
-
-            {/* Heading — NOUVELLE PROMISE */}
+            {/* Heading */}
             <h1 className="text-4xl md:text-5xl font-bold text-dark mb-6 leading-tight">
-              Vous utilisez{' '}
-              <span className="text-yellow">10% de l'IA</span>
-              .<br />
-              Je vous montre comment<br />
-              utiliser les{' '}
-              <span className="text-yellow">100%</span>
-              .
+              Gagnez{' '}
+              <span className="bg-yellow px-1.5 rounded-md">10h/semaine</span>
+              <br />
+              avec l'IA générative
             </h1>
 
-            {/* Lede — Sub-headline (déjà excellent) */}
+            {/* Lede */}
             <p className="text-lg text-mid mb-8 max-w-lg leading-relaxed">
-              Je transforme votre métier avec l'IA. Pas du rêve. Du concret.
+              William Martin — consultant IA &amp; directeur marketing externalisé. Du concret, pas du rêve.
             </p>
 
             {/* CTA Row */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-slideUp" style={{ animationDelay: '0.2s' }}>
-              <Link href="/contact" className="btn btn-accent btn-lg text-center hover:shadow-lg transition-all">
-                Réserver audit gratuit 15min →
+              <Link href="/contact" className="btn btn-primary btn-lg text-center hover:shadow-lg transition-all">
+                Demander un devis →
               </Link>
-              <Link href="/services/consulting-ia" className="btn btn-ghost btn-lg text-center border-2 hover:bg-yellow/5">
+              <Link href="/services" className="btn btn-ghost btn-lg text-center border-2 hover:bg-yellow/5">
                 Voir les services
               </Link>
-            </div>
-
-            {/* Trust items with animated counters */}
-            <div className="grid grid-cols-2 gap-8 md:gap-12 pt-8 border-t border-border animate-slideUp" style={{ animationDelay: '0.4s' }}>
-              {TRUST_ITEMS.map((item, i) => {
-                const getIcon = () => {
-                  if (item.icon === 'users') return <UsersIcon />;
-                  if (item.icon === 'star') return <StarIcon />;
-                  if (item.icon === 'badge') return <BadgeIcon />;
-                  return null;
-                };
-
-                return (
-                  <div key={i} className={i === 2 ? 'col-span-2 md:col-span-1 md:col-start-1' : ''}>
-                    <StatCounter
-                      target={parseInt(item.num)}
-                      duration={2000}
-                      label={item.label}
-                      sublabel={item.sublabel}
-                      icon={getIcon()}
-                    />
-                  </div>
-                );
-              })}
             </div>
           </div>
 
@@ -107,8 +71,7 @@ function HeroPhoto() {
                   </div>
                   <div>
                     <div className="font-bold text-sm text-dark">RS6776</div>
-                    <div className="text-xs text-mid">Certification IA nationale</div>
-                    <div className="text-xs text-gray-500">Évaluateur</div>
+                    <div className="text-xs text-mid">Jury certifié IA</div>
                   </div>
                 </div>
               </div>

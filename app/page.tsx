@@ -1,11 +1,10 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import HeroMinimal from '@/components/HeroMinimal';
+import HeroSection from '@/components/HeroSection';
+import StatsSection from '@/components/StatsSection';
+import ServicesGrid from '@/components/ServicesGrid';
 import LogoCarousel from '@/components/LogoCarousel';
-import ServicesComparison from '@/components/ServicesComparison';
-import FeaturesGrid from '@/components/FeaturesGrid';
 import ReviewCarouselNew from '@/components/ReviewCarouselNew';
-import StatsNew from '@/components/StatsNew';
 import BioBlock from '@/components/BioBlock';
 import FAQSection from '@/components/FAQSection';
 import FinalCTA from '@/components/FinalCTA';
@@ -17,10 +16,16 @@ export default function Home() {
       <Header />
 
       <main className="flex-grow">
-        {/* 1. Hero — Épuré et centré */}
-        <HeroMinimal />
+        {/* 1. Hero — variante Photo (approuvée) */}
+        <HeroSection variant="photo" />
 
-        {/* 2. Logo Carousel — Crédibilité immédiate */}
+        {/* 2. Stats — chiffres clés réels */}
+        <StatsSection />
+
+        {/* 3. Services — grille, données réelles (5 services) */}
+        <ServicesGrid />
+
+        {/* 4. Logos partenaires réels */}
         <LogoCarousel
           partners={[
             { name: 'Clarsi', logo: '/tools/Clarsi.png' },
@@ -33,25 +38,16 @@ export default function Home() {
           ]}
         />
 
-        {/* 3. Services Comparison — Layout asymétrique */}
-        <ServicesComparison />
-
-        {/* 4. Features Grid — Avantages clés */}
-        <FeaturesGrid />
-
-        {/* 5. Testimonials Carousel — Auto-scroll */}
+        {/* 5. Témoignages */}
         <ReviewCarouselNew reviews={REVIEWS} autoScroll={true} interval={6000} />
 
-        {/* 6. Stats — 4 cartes avec chiffres clés */}
-        <StatsNew />
-
-        {/* 7. Bio/About Block */}
+        {/* 6. Bio William */}
         <BioBlock />
 
-        {/* 8. FAQ Section */}
+        {/* 7. FAQ (aperçu) */}
         <FAQSection />
 
-        {/* 9. Final CTA */}
+        {/* 8. CTA finale */}
         <FinalCTA />
       </main>
 

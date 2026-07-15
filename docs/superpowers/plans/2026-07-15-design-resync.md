@@ -1,3 +1,13 @@
+> **STATUT : SUPERSÉDÉ ET EXÉCUTÉ (2026-07-15, session ultérieure).** Ce plan contenait des hypothèses
+> erronées sur le contenu du hero (copy de la variante "centered" prise par erreur au lieu de la
+> variante "photo" réellement affichée) car il n'avait pas été écrit à partir du vrai fichier source
+> claude.ai/design. La resynchronisation a finalement été effectuée en tirant le vrai projet
+> `Leconsultantdigital.fr` (projectId `019e0324-d6c9-739b-895e-bc870b68571a`) via l'outil DesignSync,
+> avec un périmètre élargi : Header (nav complète Accueil/Services/À propos/FAQ/Contact), Footer
+> (4 colonnes), nouvelle page `/services` (grille 5 services réels + méthode RACEF + tarifs), en plus
+> du Hero/Stats/About/Contact/FAQ décrits ci-dessous. Conserver ce fichier pour l'historique ; ne pas
+> l'utiliser comme référence de copy pour de futurs changements de design.
+
 # Resynchronisation Design (claude.ai/design → site-leconsultant) Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.

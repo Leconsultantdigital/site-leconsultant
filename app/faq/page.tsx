@@ -173,10 +173,11 @@ export default function FAQ() {
 
       <main className="flex-grow">
         {/* Hero */}
-        <section className="bg-gradient-to-b from-blue-50 to-white py-16">
+        <section className="bg-bg-light py-16">
           <div className="container max-w-3xl text-center">
-            <h1 className="text-4xl font-bold mb-4">50+ Questions Fréquentes</h1>
-            <p className="text-xl text-gray-600">
+            <span className="eyebrow">Questions fréquentes</span>
+            <h1 className="text-4xl font-bold mb-4 text-dark">50+ Questions Fréquentes</h1>
+            <p className="text-xl text-mid">
               Tout sur l'IA générative, formations, Directeur Marketing, pricing, et plus.
             </p>
           </div>
@@ -187,7 +188,7 @@ export default function FAQ() {
           <div className="container max-w-3xl">
             {FAQ_ITEMS.map((section, sectionIdx) => (
               <div key={sectionIdx} className="mb-12">
-                <h2 className="text-2xl font-bold mb-6 text-blue-600 border-b-2 border-blue-200 pb-3">
+                <h2 className="text-2xl font-bold mb-6 text-dark border-b-2 border-yellow pb-3">
                   {section.section}
                 </h2>
 
@@ -195,12 +196,12 @@ export default function FAQ() {
                   {section.items.map((item, itemIdx) => (
                     <details
                       key={itemIdx}
-                      className="bg-white border border-gray-200 p-6 rounded-lg cursor-pointer hover:border-blue-300 hover:shadow-md transition group"
+                      className="bg-white border border-border p-6 rounded-lg cursor-pointer hover:border-yellow hover:shadow-md transition group"
                     >
-                      <summary className="font-bold text-blue-700 text-base group-hover:text-blue-900 transition">
+                      <summary className="font-bold text-dark text-base group-hover:text-yellow-dark transition">
                         {item.q}
                       </summary>
-                      <p className="mt-4 text-gray-700 leading-relaxed text-sm">
+                      <p className="mt-4 text-mid leading-relaxed text-sm">
                         {item.a}
                       </p>
                     </details>
@@ -210,12 +211,12 @@ export default function FAQ() {
             ))}
 
             {/* CTA */}
-            <div className="mt-16 bg-gradient-to-r from-blue-50 to-cyan-50 p-8 rounded-lg border-l-4 border-blue-600 text-center">
-              <h2 className="text-2xl font-bold mb-4">Votre Question N'Est Pas Listée ?</h2>
-              <p className="text-gray-700 mb-6">
+            <div className="mt-16 bg-bg-light p-8 rounded-lg border-l-4 border-yellow text-center">
+              <h2 className="text-2xl font-bold mb-4 text-dark">Votre Question N'Est Pas Listée ?</h2>
+              <p className="text-mid mb-6">
                 Contactez-moi directement. Je vous répondrai personnellement en 24h.
               </p>
-              <Link href="/contact" className="btn-primary">
+              <Link href="/contact" className="btn btn-accent">
                 Poser une Question
               </Link>
             </div>

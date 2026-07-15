@@ -153,6 +153,7 @@ p {
 
 .btn-ghost {
   @apply bg-transparent text-dark border-2 border-border;
+  border-style: solid;
 }
 
 .btn-ghost:hover {

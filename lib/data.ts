@@ -36,7 +36,7 @@ export const SERVICES = [
     num: '03',
     icon: 'chart',
     title: 'Consultant Marketing',
-    pitch: 'Directeur marketing externalisé. Stratégie + exécution. LinkedIn, SEO, contenu, automation. À la carte: 0.5j à 1.5j/semaine.',
+    pitch: 'Directeur marketing externalisé à la carte. Stratégie + exécution. LinkedIn, SEO, contenu, automation. 0.5j à 1.5j/semaine.',
     bullets: [
       'Audit stratégique gratuit (1 jour)',
       'LinkedIn B2B + SEO + contenu',
@@ -45,26 +45,54 @@ export const SERVICES = [
     ],
     href: '/services/consultant-marketing',
   },
+  {
+    id: 'directeur-marketing',
+    num: '04',
+    icon: 'target',
+    title: 'Directeur Marketing IA-Powered',
+    pitch: 'Directeur marketing externalisé récurrent. Stratégie 360° + exécution quotidienne, sans recruter un CMO. €1500-5000/mois.',
+    bullets: [
+      'Stratégie marketing 360° : personas, positionnement, plan annuel',
+      'Exécution quotidienne : contenu, réseaux, SEO, leads',
+      'IA intégrée (ChatGPT, Claude, Make.com) pour 3x plus d\'output',
+      'Pricing prévisible, sans engagement long terme',
+    ],
+    href: '/services/directeur-marketing',
+  },
+  {
+    id: 'jury-certification',
+    num: '05',
+    icon: 'award',
+    title: 'Jury Certification IA (RS6776)',
+    pitch: 'Certification nationale reconnue RNCP, partenaire Educademy. Évaluateur officiel des compétences IA générative.',
+    bullets: [
+      'Maîtrise des outils (ChatGPT, Claude, Gemini, etc.)',
+      'Cas d\'usage métier',
+      'Éthique et légalité de l\'IA',
+      'Intégration en entreprise',
+    ],
+    href: '/services/jury-certification',
+  },
 ];
 
 export const STATS = [
   {
-    tag: 'Lead gen',
-    big: '+300',
-    unit: '%',
-    desc: 'de leads qualifiés en 3 mois pour une PME B2B SaaS.',
-  },
-  {
     tag: 'Formation',
-    big: '50',
+    big: '500',
     unit: '+',
-    desc: 'salariés formés à ChatGPT en 6 semaines, ROI dès J+30.',
+    desc: 'professionnels formés à l\'IA générative et au marketing.',
   },
   {
-    tag: 'Revenue',
-    big: '€5',
-    unit: 'M+',
-    desc: 'de revenue générée pour clients ces 3 dernières années.',
+    tag: 'Satisfaction',
+    big: '5',
+    unit: '/5',
+    desc: '130 avis Google, sans avis acheté ni filtré.',
+  },
+  {
+    tag: 'Expérience',
+    big: '15',
+    unit: '+ ans',
+    desc: 'd\'expertise digitale, agence et côté annonceur.',
   },
 ];
 

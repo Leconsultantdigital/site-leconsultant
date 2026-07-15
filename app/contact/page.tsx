@@ -70,12 +70,13 @@ export default function Contact() {
       <Header />
 
       <main className="flex-grow">
-        <section className="bg-gradient-to-b from-blue-50 to-white py-16">
-          <div className="container max-w-3xl">
-            <h1 className="text-4xl font-bold mb-4 text-center">
+        <section className="bg-bg-light py-16">
+          <div className="container max-w-3xl text-center">
+            <span className="eyebrow">Demander un devis</span>
+            <h1 className="text-4xl font-bold mb-4 text-dark">
               Parlons de Votre Projet
             </h1>
-            <p className="text-xl text-gray-600 text-center">
+            <p className="text-xl text-mid">
               30 min de consultation gratuite pour évaluer vos besoins et définir un plan d'action.
             </p>
           </div>
@@ -101,7 +102,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow"
                       placeholder="Votre nom"
                     />
                   </div>
@@ -114,7 +115,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow"
                       placeholder="votre@email.com"
                     />
                   </div>
@@ -126,7 +127,7 @@ export default function Contact() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow"
                       placeholder="+33 6 XX XX XX XX"
                     />
                   </div>
@@ -137,7 +138,7 @@ export default function Contact() {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow"
                     >
                       <option value="consulting-ia">Consulting IA & Formation</option>
                       <option value="directeur-marketing">Directeur Marketing Externalisé</option>
@@ -152,19 +153,19 @@ export default function Contact() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-32"
+                      className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow h-32"
                       placeholder="Décrivez votre besoin..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full btn-primary text-center font-bold"
+                    className="w-full btn btn-accent text-center"
                   >
                     Envoyer & Réserver Audit
                   </button>
 
-                  <p className="text-xs text-gray-500 text-center">
+                  <p className="text-xs text-mid text-center">
                     Je vous recontacterai sous 24h par email ou téléphone.
                   </p>
                 </form>
@@ -172,47 +173,47 @@ export default function Contact() {
 
               {/* Info */}
               <div>
-                <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                  <h3 className="font-bold text-lg mb-4">Infos Pratiques</h3>
+                <div className="bg-bg-light p-6 rounded-lg mb-6">
+                  <h3 className="font-bold text-lg mb-4 text-dark">Infos Pratiques</h3>
 
                   <div className="space-y-6">
                     <div>
-                      <p className="text-sm font-semibold text-gray-600 mb-1">📍 Localisation</p>
-                      <p className="text-gray-700">Valence, Drôme (France)</p>
-                      <p className="text-sm text-gray-500">Disponible 100% remote</p>
+                      <p className="text-sm font-semibold text-mid mb-1">📍 Localisation</p>
+                      <p className="text-dark">Valence, Drôme (France)</p>
+                      <p className="text-sm text-muted">Disponible 100% remote</p>
                     </div>
 
                     <div>
-                      <p className="text-sm font-semibold text-gray-600 mb-1">⏰ Délais</p>
-                      <p className="text-gray-700">Réponse sous 24h</p>
-                      <p className="text-sm text-gray-500">Disponibilités : jours ouvrables 9h-18h</p>
+                      <p className="text-sm font-semibold text-mid mb-1">⏰ Délais</p>
+                      <p className="text-dark">Réponse sous 24h</p>
+                      <p className="text-sm text-muted">Disponibilités : jours ouvrables 9h-18h</p>
                     </div>
 
                     <div>
-                      <p className="text-sm font-semibold text-gray-600 mb-1">💰 Audit Gratuit</p>
-                      <p className="text-gray-700">30 min sans engagement</p>
-                      <p className="text-sm text-gray-500">Pour évaluer vos besoins</p>
+                      <p className="text-sm font-semibold text-mid mb-1">💰 Audit Gratuit</p>
+                      <p className="text-dark">30 min sans engagement</p>
+                      <p className="text-sm text-muted">Pour évaluer vos besoins</p>
                     </div>
 
                     <div>
-                      <p className="text-sm font-semibold text-gray-600 mb-1">🔗 Réseaux Sociaux</p>
+                      <p className="text-sm font-semibold text-mid mb-1">🔗 Réseaux Sociaux</p>
                       <p className="text-sm">
-                        <a href="https://linkedin.com" className="text-blue-600 hover:underline">LinkedIn</a>
+                        <a href="https://linkedin.com" className="text-dark hover:text-yellow-dark underline">LinkedIn</a>
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <h3 className="font-bold text-lg mb-3">Vous Préférez un Appel Direct ?</h3>
-                  <p className="text-gray-700 mb-4">
+                <div className="bg-bg-light p-6 rounded-lg">
+                  <h3 className="font-bold text-lg mb-3 text-dark">Vous Préférez un Appel Direct ?</h3>
+                  <p className="text-mid mb-4">
                     Réservez directement un créneau sur Calendly :
                   </p>
                   <a
                     href="https://calendar.app.google/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary text-center block"
+                    className="btn btn-ghost text-center block"
                   >
                     Calendly - Réserver Maintenant
                   </a>
@@ -223,9 +224,9 @@ export default function Contact() {
         </section>
 
         {/* FAQ Contact */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-bg-light">
           <div className="container max-w-2xl">
-            <h2 className="text-2xl font-bold mb-8 text-center">Questions sur le Contact</h2>
+            <h2 className="text-2xl font-bold mb-8 text-center text-dark">Questions sur le Contact</h2>
 
             <div className="space-y-4">
               {[
@@ -233,9 +234,9 @@ export default function Contact() {
                 { q: "L'audit est vraiment gratuit ?", a: "Oui, 100%. Aucune obligation d'acheter après." },
                 { q: "Puis-je appeler directement ?", a: "Préférez Calendly ou le formulaire. Je vous répondrai rapidement." },
               ].map((item, i) => (
-                <details key={i} className="bg-white p-4 rounded cursor-pointer">
-                  <summary className="font-bold">{item.q}</summary>
-                  <p className="mt-3 text-gray-700 text-sm">{item.a}</p>
+                <details key={i} className="bg-white border border-border p-4 rounded-lg cursor-pointer">
+                  <summary className="font-bold text-dark">{item.q}</summary>
+                  <p className="mt-3 text-mid text-sm">{item.a}</p>
                 </details>
               ))}
             </div>

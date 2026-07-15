@@ -2,130 +2,64 @@
 
 import Link from 'next/link';
 import { SERVICES } from '@/lib/data';
-import { FormationIcon, MarketingIcon, LocalIcon } from '@/components/ServiceIcons';
+import { ServiceIcon } from '@/components/Icons';
 
-export default function ServicesGrid() {
-  const serviceColors = [
-    {
-      accent: 'from-secondary/20 via-secondary/10 to-secondary/5',
-      accentLine: 'bg-secondary',
-      icon: FormationIcon,
-      textAccent: 'text-secondary',
-      bgCheckmark: 'bg-secondary/10'
-    },
-    {
-      accent: 'from-yellow/20 via-yellow/10 to-yellow/5',
-      accentLine: 'bg-yellow',
-      icon: MarketingIcon,
-      textAccent: 'text-yellow',
-      bgCheckmark: 'bg-yellow/10'
-    },
-    {
-      accent: 'from-success/20 via-success/10 to-success/5',
-      accentLine: 'bg-success',
-      icon: LocalIcon,
-      textAccent: 'text-success',
-      bgCheckmark: 'bg-success/10'
-    },
-  ];
-
+export default function ServicesGrid({ showFooterLink = true }: { showFooterLink?: boolean } = {}) {
   return (
-    <section className="py-16 md:py-20 bg-white">
+    <section className="py-16 md:py-20">
       <div className="container">
-        {/* Header */}
-        <div className="mb-16">
-          <p className="text-sm font-bold text-yellow mb-4 uppercase tracking-widest">💼 Services</p>
-          <h2 className="text-4xl md:text-4xl font-bold text-dark mb-4">
-            <span className="text-secondary">3</span> services<br />
-            qui <span className="text-yellow">transforment</span>
+        <div className="text-center mb-14 max-w-xl mx-auto">
+          <span className="eyebrow">Mes services</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
+            5 façons de travailler ensemble
           </h2>
+          <p className="text-mid">Chacun pensé pour des résultats mesurables, pas des slides.</p>
         </div>
 
-        {/* Services Grid — Asymmetric Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {SERVICES.map((service, i) => {
-            const { accent, accentLine, icon: IconComponent, textAccent, bgCheckmark } = serviceColors[i] || serviceColors[0];
-            return (
-              <div
-                key={i}
-                className={`
-                  group
-                  bg-gradient-to-br ${accent}
-                  rounded-3xl p-10 md:p-12
-                  border-2 border-white/60
-                  shadow-lg
-                  transition-all duration-300
-                  hover:-translate-y-3 hover:shadow-2xl hover:border-yellow/40
-                  ${i === 1 ? 'md:scale-105' : ''}
-                `}
-              >
-
-                {/* Top: Icon + Number */}
-                <div className="flex items-start justify-between mb-6">
-                  <div className={`${textAccent} w-12 h-12 flex items-center justify-center`}>
-                    <IconComponent />
-                  </div>
-                  <div className={`text-3xl font-bold ${textAccent}`}>
-                    {service.num}
-                  </div>
-                </div>
-
-                {/* Accent line under number (animates on hover) */}
-                <div
-                  className={`h-1 w-12 ${accentLine} rounded-full mb-6 transition-all duration-500 group-hover:w-20`}
-                />
-
-                {/* Title */}
-                <h3 className="text-xl md:text-2xl font-bold text-dark mb-3 leading-snug">
-                  {service.title}
-                </h3>
-
-                {/* Pitch */}
-                <p className="text-sm text-mid mb-6 leading-relaxed">
-                  {service.pitch}
-                </p>
-
-                {/* Bullets */}
-                <ul className="space-y-3 mb-8">
-                  {service.bullets.map((bullet, j) => (
-                    <li key={j} className="flex items-start gap-3">
-                      <div className={`w-5 h-5 rounded-full ${bgCheckmark} flex items-center justify-center flex-shrink-0 mt-0.5`}>
-                        <span className={`text-xs font-bold ${textAccent}`}>✓</span>
-                      </div>
-                      <span className="text-sm text-dark font-medium">{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* CTA Button */}
-                <Link
-                  href={service.href}
-                  className={`
-                    inline-flex items-center gap-2
-                    font-semibold text-dark
-                    hover:text-yellow
-                    transition-colors duration-300
-                    group/link
-                    link-underline
-                  `}
-                >
-                  En savoir plus
-                  <span className="transition-transform duration-300 group-hover/link:translate-x-1">→</span>
-                </Link>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {SERVICES.map((service) => (
+            <div
+              key={service.id}
+              className="group bg-white border border-border rounded-[20px] p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-dark"
+            >
+              <div className="flex items-center gap-2.5 text-xs font-bold tracking-widest text-mid mb-5">
+                <span className="inline-block w-6 h-0.5 bg-yellow" />
+                {service.num}
               </div>
-            );
-          })}
+
+              <div className="w-14 h-14 bg-yellow rounded-2xl flex items-center justify-center text-dark mb-5">
+                <ServiceIcon name={service.icon} size={26} />
+              </div>
+
+              <h3 className="text-xl font-bold text-dark mb-3">{service.title}</h3>
+              <p className="text-sm text-mid leading-relaxed mb-5">{service.pitch}</p>
+
+              <ul className="space-y-2 mb-6">
+                {service.bullets.map((bullet, j) => (
+                  <li key={j} className="flex items-start gap-2.5 text-sm text-dark">
+                    <span className="text-yellow-dark font-bold flex-shrink-0">✓</span>
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+
+              <Link
+                href={service.href}
+                className="mt-auto inline-flex items-center gap-1.5 text-sm font-bold text-dark border-b-2 border-yellow self-start pb-0.5 hover:text-yellow-dark transition-colors"
+              >
+                En savoir plus →
+              </Link>
+            </div>
+          ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16 pt-12 border-t border-border">
-          <p className="text-mid mb-6 text-lg">
-            Envie de combiner plusieurs services?
-          </p>
-          <a href="/contact" className="btn btn-accent">
-            Demander un audit personnalisé →
-          </a>
-        </div>
+        {showFooterLink && (
+          <div className="text-center mt-12">
+            <Link href="/services" className="btn btn-ghost">
+              Voir tous les services →
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
