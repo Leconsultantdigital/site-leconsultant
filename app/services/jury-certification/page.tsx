@@ -22,7 +22,7 @@ export default function JuryCertification() {
             <p className="text-xl text-gray-600 mb-8">
               Certification nationale reconnue RNCP. Partenaire Educademy.
             </p>
-            <Link href="/contact" className="btn-primary">En Savoir Plus</Link>
+            <Link href="/contact" className="btn btn-primary">En Savoir Plus</Link>
           </div>
         </section>
 

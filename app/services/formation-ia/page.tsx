@@ -44,7 +44,7 @@ export default function FormationIA() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => handleCTAClick('Demander devis formation')}
-                  className="btn-primary text-center"
+                  className="btn btn-primary text-center"
                 >
                   Demander Devis Formation
                 </button>
@@ -53,7 +53,7 @@ export default function FormationIA() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => handleCTAClick('Calendly formation')}
-                  className="btn-accent text-center"
+                  className="btn btn-accent text-center"
                 >
                   Réserver une Démo (30 min)
                 </a>
@@ -191,7 +191,7 @@ export default function FormationIA() {
               </div>
               <button
                 onClick={() => handleCTAClick('Demander devis formation')}
-                className="w-full btn-primary text-center"
+                className="w-full btn btn-primary text-center"
               >
                 Demander un Devis Personnalisé
               </button>
@@ -249,7 +249,7 @@ export default function FormationIA() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={() => handleCTAClick('Demander devis formation - CTA')}
-                className="btn-primary text-center"
+                className="btn btn-primary text-center"
               >
                 Demander un Devis
               </button>
@@ -258,7 +258,7 @@ export default function FormationIA() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => handleCTAClick('Calendly formation - CTA')}
-                className="btn-accent text-center"
+                className="btn btn-accent text-center"
               >
                 Réserver un Créneau
               </a>

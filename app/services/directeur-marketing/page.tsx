@@ -25,7 +25,7 @@ export default function DirectorMarketing() {
             <p className="text-lg text-gray-700 mb-8">
               <strong>Sans recruter un CMO</strong>, obtenez une stratégie marketing professionnelle + exécution quotidienne. ChatGPT, Claude, Make.com intégrés pour accélérer tout.
             </p>
-            <Link href="/contact" className="btn-primary">Audit Gratuit (30 min)</Link>
+            <Link href="/contact" className="btn btn-primary">Audit Gratuit (30 min)</Link>
           </div>
         </section>
 

@@ -44,7 +44,7 @@ export default function ConsultantMarketing() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => handleCTAClick('Réserver audit stratégique')}
-                  className="btn-primary text-center"
+                  className="btn btn-primary text-center"
                 >
                   Réserver Audit Gratuit
                 </button>
@@ -53,7 +53,7 @@ export default function ConsultantMarketing() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => handleCTAClick('Calendly marketing')}
-                  className="btn-accent text-center"
+                  className="btn btn-accent text-center"
                 >
                   Voir mes disponibilités
                 </a>
@@ -214,7 +214,7 @@ export default function ConsultantMarketing() {
               </p>
               <button
                 onClick={() => handleCTAClick('Demander devis marketing')}
-                className="btn-primary text-center inline-block"
+                className="btn btn-primary text-center inline-block"
               >
                 Demander une Estimation
               </button>
@@ -272,7 +272,7 @@ export default function ConsultantMarketing() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={() => handleCTAClick('Réserver audit stratégique - CTA')}
-                className="btn-primary text-center"
+                className="btn btn-primary text-center"
               >
                 Réserver Audit Gratuit
               </button>
@@ -281,7 +281,7 @@ export default function ConsultantMarketing() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => handleCTAClick('Calendly marketing - CTA')}
-                className="btn-accent text-center"
+                className="btn btn-accent text-center"
               >
                 Voir mes disponibilités
               </a>
