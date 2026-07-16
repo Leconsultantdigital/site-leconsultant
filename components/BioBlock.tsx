@@ -9,14 +9,13 @@ export default function BioBlock() {
     <section className="py-16 md:py-20 bg-bg-light">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-          {/* Left: Photo placeholder */}
+          {/* Left: Photo */}
           <div className="relative hidden md:block">
             <Image
-              src="/william-placeholder.svg"
+              src="/william.jpg"
               alt="William Martin - Consultant IA et formateur"
               width={400}
               height={500}
-              priority={true}
               className="max-w-md mx-auto rounded-3xl shadow-lg object-cover"
             />
           </div>

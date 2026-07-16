@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <header className="bg-white/92 backdrop-blur-sm sticky top-0 z-50 border-b border-border/60">
-      <nav className="container flex justify-between items-center py-4 h-18">
+      <nav className="container flex justify-between items-center py-10">
         {/* Logo */}
         <Link href="/" className="flex items-center hover:opacity-80 transition">
           <Image

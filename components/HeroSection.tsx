@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export type HeroVariant = 'photo' | 'typo' | 'split' | 'centered';
 
@@ -16,9 +17,10 @@ function HeroPhoto() {
           {/* Left: Text */}
           <div className="animate-fadeInLeft">
             {/* Heading */}
-            <h1 className="text-4xl md:text-5xl font-bold text-dark mb-6 leading-tight">
-              Gagnez{' '}
-              <span className="bg-yellow px-1.5 rounded-md">10h/semaine</span>
+            <h1 className="text-4xl md:text-5xl font-bold text-dark mb-6 leading-[1.7]">
+              Gagnez
+              <br />
+              <span className="bg-yellow px-1.5 py-1 rounded-md inline-block">10h/semaine</span>
               <br />
               avec l'IA générative
             </h1>
@@ -53,14 +55,16 @@ function HeroPhoto() {
                   zIndex: 0,
                 }}
               />
-              {/* Card with shadow */}
-              <div className="absolute inset-0 bg-white rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white" role="img" aria-label="William Martin - AI Consultant and Trainer">
-                <div className="w-full h-full bg-gradient-to-b from-gray-200 to-gray-100 flex items-center justify-center text-gray-400 text-center px-4">
-                  <div>
-                    <div className="text-sm font-medium mb-2">📸 Photo William Martin</div>
-                    <div className="text-xs text-gray-500">(4:5 aspect ratio)</div>
-                  </div>
-                </div>
+              {/* Photo */}
+              <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white">
+                <Image
+                  src="/william.jpg"
+                  alt="William Martin - Consultant IA et directeur marketing"
+                  fill
+                  sizes="(max-width: 768px) 0px, 32rem"
+                  className="object-cover"
+                  priority
+                />
               </div>
 
               {/* Badge 1: RS6776 — Pulse animation instead of bounce */}

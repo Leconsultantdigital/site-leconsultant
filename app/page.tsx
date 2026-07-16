@@ -4,11 +4,10 @@ import HeroSection from '@/components/HeroSection';
 import StatsSection from '@/components/StatsSection';
 import ServicesGrid from '@/components/ServicesGrid';
 import LogoCarousel from '@/components/LogoCarousel';
-import ReviewCarouselNew from '@/components/ReviewCarouselNew';
+import LocalNordReviews from '@/components/LocalNordReviews';
 import BioBlock from '@/components/BioBlock';
 import FAQSection from '@/components/FAQSection';
 import FinalCTA from '@/components/FinalCTA';
-import { REVIEWS } from '@/lib/data';
 
 export default function Home() {
   return (
@@ -38,8 +37,8 @@ export default function Home() {
           ]}
         />
 
-        {/* 5. Témoignages */}
-        <ReviewCarouselNew reviews={REVIEWS} autoScroll={true} interval={6000} />
+        {/* 5. Témoignages (widget LocalNord) */}
+        <LocalNordReviews />
 
         {/* 6. Bio William */}
         <BioBlock />

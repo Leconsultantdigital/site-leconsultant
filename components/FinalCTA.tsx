@@ -17,12 +17,14 @@ export default function FinalCTA() {
         <span className="inline-block text-xs font-bold uppercase tracking-widest text-yellow mb-4">Prochaine étape</span>
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
-          Parlons de votre stratégie IA
+          Parlons de votre stratégie.
+          <br />
+          30 minutes, sans engagement.
         </h2>
 
         {/* Subheading */}
         <p className="text-lg md:text-xl text-gray-300 mb-12 leading-relaxed">
-          Réservez un audit gratuit de 30 minutes — pas d'engagement, juste du concret.
+          On regarde ensemble vos enjeux, et je vous dis honnêtement si je peux vous aider — ou pas. Du concret, dès la première discussion.
         </p>
 
         {/* CTA Buttons */}
@@ -32,11 +34,11 @@ export default function FinalCTA() {
           </Link>
           <a
             href="https://calendar.app.google/"
-            className="btn btn-ghost btn-lg border-2 border-white text-white hover:bg-white hover:text-dark"
+            className="btn btn-ghost-dark btn-lg"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Réserver directement
+            Réserver 30 min gratuites
           </a>
         </div>
       </div>

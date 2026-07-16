@@ -5,7 +5,7 @@ import { SERVICES } from '@/lib/data';
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-border mt-20">
-      <div className="container py-16">
+      <div className="container py-20 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10 mb-12">
           {/* Brand + pitch */}
           <div>
