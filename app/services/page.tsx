@@ -23,7 +23,7 @@ const PRICING_ROWS: [string, string, string, string][] = [
   ['Formation IA (ChatGPT, Claude…)', 'Groupe ou 1:1', '3 jours', 'Sur devis (CPF/OPCO)'],
   ['Consulting IA', '1:1, à la carte', 'Après audit gratuit', '650€/jour'],
   ['Consultant Marketing', 'Retainer flexible', '0.5 à 1.5j/semaine', '1 000€ à 3 000€/mois'],
-  ['Directeur Marketing Externalisé', 'Mensuel', '3 à 5j/mois', '1 500€ à 5 000€/mois'],
+  ['Directeur Marketing Externalisé', 'Mensuel', '1 à 8j/mois', '500€ à 4 000€/mois'],
   ['Jury Certification IA (RS6776)', '1:1', 'Évaluation', '500€'],
 ];
 

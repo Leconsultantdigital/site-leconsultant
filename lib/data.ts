@@ -50,7 +50,7 @@ export const SERVICES = [
     num: '04',
     icon: 'target',
     title: 'Directeur Marketing IA-Powered',
-    pitch: 'Directeur marketing externalisé récurrent. Stratégie 360° + exécution quotidienne, sans recruter un CMO. €1500-5000/mois.',
+    pitch: 'Directeur marketing externalisé récurrent. Stratégie 360° + exécution quotidienne, sans recruter un CMO. 500€ à 4 000€/mois.',
     bullets: [
       'Stratégie marketing 360° : personas, positionnement, plan annuel',
       'Exécution quotidienne : contenu, réseaux, SEO, leads',
